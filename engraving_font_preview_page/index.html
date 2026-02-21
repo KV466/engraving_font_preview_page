@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이리듐 각인 폰트 미리보기</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/Tablet_Mobile.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Engraving Preivew</h1>
+        </header>
+        <!--각인 안내사항-->
+        <main>
+            <div id="Notice">
+                <ul>
+                    <h3>각인 안내사항</h3>
+                    <li>각인 문구는 <span>띄어쓰기 포함 영문 15자, 한글 10자 이내를 권장</span>합니다.</li>
+                    <li>시안 요청 시 <span>1~3일 추가 소요</span>될 수 있습니다.</li>
+                    <li>기업 **컬러 로고, 불박 각인 등**은 별도 <span>협의 후 진행 가능</span>합니다.</li>
+                    <li>기본적인 특수문자만 사용 가능합니다. (예시: . , ! ? : ; - _ ( ) [ ] / @ # & )</li>
+                    <li>이모지 및 일부 기호는 각인되지 않거나 출력이 불가할 수 있습니다.</li>
+                    <li><span>각인 주의사항 페이지를 꼭 확인해 주세요. 미숙지로 인한 불이익은 구매자 책임입니다.</span></li>
+                </ul>
+            </div>
+            
+        <!--텍스트 입력하는 곳-->
+            <div id="Input_Box">
+                <div class="button">
+                    <input type="text" name="inputtext" id="FontPreview" placeholder="띄어쓰기 포함 영문 15자, 한글 10자 이내로 각인하시려는 문구를 여기에 작성해 보세요." style="font-weight: 600;">
+                    <input type="button" value="미리보기" class="preview_button">
+                </div>
+            </div>
+            
+        <!--서체 선택 버튼-->
+            <div id="Button_Box">
+                <ul>
+                    <li class="button_1">모든<br> 서체 보기</li>
+                    <li class="button_2">한글/영어/한자/일본어<br>가능 서체 보기</li>
+                    <li class="button_3">한글/영어/일본어<br>가능 서체 보기</li>
+                    <li class="button_4">한글/영어<br> 가능 서체 보기</li>
+                    <li class="button_5">영어<br>가능 서체 보기</li>
+                </ul>
+            </div>
+
+        <!--폰트 미리보기 버튼-->
+            <div id="Preview_Box">
+            <!--모든 폰트-->
+                <ul class="all_font">
+                    <!--한/영/한/일-101번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>101번</h5>
+                                <h5>(한글/영어/한문/일본어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영/한/일-102번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>102번</h5>
+                                <h5>(한글/영어/한문/일본어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영/일-110번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>110번</h5>
+                                <h5>(한글/영어/일본어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영/일-111번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>111번</h5>
+                                <h5>(한글/영어/일본어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>           
+                    <!--한/영/일-112번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>112번</h5>
+                                <h5>(한글/영어/일본어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-120번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>120번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-121번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>121번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-122번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>122번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-123번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>123번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-124번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>124번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>  
+                    <!--한/영-125번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>125번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>              
+                    <!--한/영-126번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>126번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>  
+                    <!--한/영-127번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>127번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-128번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>128번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>    
+                    <!--한/영-129번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>129번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-130번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>130번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li> 
+                    <!--한/영-131번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>131번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-132번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>132번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>  
+                   <!--영-151번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>151번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>   
+                   <!--영-152번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>152번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>     
+                   <!--영-153번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>153번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>                                                                                                                                                                                                                                                                                                                                             
+                   <!--영-154번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>154번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>              
+                   <!--영-155번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>155번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>              
+                   <!--영-156번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>156번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>              
+                   <!--영-157번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>157번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>              
+                   <!--영-158번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>158번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>    
+                   <!--영-159번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>159번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>              
+                   <!--영-160번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>160번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>  
+                   <!--영-161번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>161번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>     
+                   <!--영-162번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>162번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>                                                                                                                      
+                </ul>
+            <!--한글/영어/한자/일본어 버튼-->
+                <ul class="font4" style="display: none;">
+                    <!--한/영/한/일-101번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>101번</h5>
+                                <h5>(한글/영어/한문/일본어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영/한/일-102번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>102번</h5>
+                                <h5>(한글/영어/한문/일본어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>                    
+                </ul>
+            <!--한글/영어/일본어 버튼-->
+                <ul class="font3" style="display: none;">
+                    <!--한/영/일-110번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>110번</h5>
+                                <h5>(한글/영어/일본어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영/일-111번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>111번</h5>
+                                <h5>(한글/영어/일본어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>           
+                    <!--한/영/일-112번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>112번</h5>
+                                <h5>(한글/영어/일본어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>                    
+                </ul>
+            <!--한글/영어 버튼-->
+                <ul class="font2" style="display: none;">
+                    <!--한/영-120번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>120번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-121번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>121번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-122번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>122번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-123번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>123번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-124번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>124번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>  
+                    <!--한/영-125번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>125번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>              
+                    <!--한/영-126번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>126번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>  
+                    <!--한/영-127번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>127번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-128번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>128번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>    
+                    <!--한/영-129번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>129번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-130번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>130번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li> 
+                    <!--한/영-131번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>131번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>
+                    <!--한/영-132번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>132번</h5>
+                                <h5>(한글/영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>                      
+                </ul>
+            <!--영어 폰트-->
+                <ul class="font1" style="display: none;">
+                   <!--영-151번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>151번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>   
+                   <!--영-152번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>152번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>     
+                   <!--영-153번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>153번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>                                                                                                                                                                                                                                                                                                                                             
+                   <!--영-154번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>154번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>              
+                   <!--영-155번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>155번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>              
+                   <!--영-156번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>156번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>              
+                   <!--영-157번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>157번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>              
+                   <!--영-158번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>158번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>    
+                   <!--영-159번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>159번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>              
+                   <!--영-160번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>160번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>  
+                   <!--영-161번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>161번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>     
+                   <!--영-162번-->
+                    <li>
+                        <ul class="font_box">
+                            <li>
+                                <h5>162번</h5>
+                                <h5>(영어)</h5>
+                            </li>
+                            <li>
+                                <p>가나다라마바사아자차카타파하</p>
+                                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                                <p>洪吉童</p>
+                                <p>ホン・ギルドン</p>
+                                <p>0123456789</p>
+                                <p>. , ! ? ; : - _ ( ) [ ] / @ # &</p>
+                            </li>
+                            <!--폰트 적용된 텍스트 받는 곳-->
+                            <li class="intext"><h6>텍스트 받는 곳</h6></li>
+                        </ul>
+                    </li>  
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+body{
+    background-color: rgb(237, 225, 215);
+}
+
+#container{
+    width: 100%;
+    margin: 0 auto;
+}
+header{
+    height: 2rem;
+    background-color: rgb(70, 70, 70);
+    padding: 2%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+/*각인 안내사항*/
+main{
+    width: 100%;
+    height: 24rem;
+}
+#Notice{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Notice>ul{
+    background-color: rgb(161, 161, 161);
+    border-radius: 40px;
+    width: 40%;
+    height: 80%;
+}
+#Notice>ul>h3{
+    font-size: 1vW;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+}
+#Notice>ul>li{
+    list-style:decimal;
+    list-style-position: inside;
+    line-height: 200%;
+    width: 80%;
+}
+#Notice>ul>li>span{
+    font-weight: 500;
+}
+
+/*텍스트 입력*/
+#Input_Box{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Input_Box>.button{
+    width: 40%;
+    display: flex;
+    justify-content:space-between;
+}
+.button>#FontPreview {
+    width: 80%;
+    height: 2rem;
+    padding: 1rem;
+    font-size: larger;
+    margin: 0;
+}
+.button>.preview_button {
+    width: 10%;
+    font-size: large;
+    margin: 0;
+}
+
+/*서체 선택 버튼*/
+#Button_Box{
+    width: 100%;
+    height: 16rem;
+}
+#Button_Box>ul{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: center;
+    gap: 1rem 1rem;
+}
+#Button_Box>ul>li{
+    width: 20rem;
+    height: 8rem;
+    font-weight: 500;
+    list-style: none;
+    background-color: rgb(150, 150, 150);
+    cursor: pointer;
+    border-radius: 16px;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*폰트 리스트*/
+#Preview_Box{
+    width: 100%;
+    height: 100%;
+}
+#Preview_Box>.all_font,
+#Preview_Box>.font4,
+#Preview_Box>.font3,
+#Preview_Box>.font2,
+#Preview_Box>.font1 {
+    width: 70%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20% 2%;
+}
+#Preview_Box>.all_font>li,
+#Preview_Box>.font4>li,
+#Preview_Box>.font3>li,
+#Preview_Box>.font2>li,
+#Preview_Box>.font1>li {
+    overflow-wrap: break-word;
+    margin: 0.4rem 0;
+    width: 20%;
+    height: 20rem;
+    background-color: rgb(213, 213, 213);
+    list-style: none;
+}
+.font_box{
+    text-align: center;
+}
+.font_box>li{
+    list-style: none;
+}
+.font_box>li:first-child{
+    margin-bottom: 1rem;
+}
+.font_box>li>h5{
+    padding: 0.2rem 0;
+    font-size: larger;
+    background-color: rgb(138, 138, 138);
+}
+.font_box>li>p{
+    font-size: medium;
+    margin-bottom: 0.4rem;
+    padding: 0 1rem;
+}
+.font_box>.intext{
+    margin-top: 1.6rem;
+    padding: 1.4rem;
+    background-color: rgb(134, 134, 134);
+}
+.font_box>.intext>h6{
+    font-size: large;
+}
+
+
