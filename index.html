@@ -4,9 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이리듐 각인 폰트 미리보기</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/Tablet_Mobile.css">
+    <!--157번/구글폰트-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <!--158번/구글폰트-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Parisienne&display=swap" rel="stylesheet">
+    <!--159번/구글폰트-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@400..700&family=Parisienne&display=swap" rel="stylesheet">
+    <!--160번/구글폰트-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Parisienne&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <style>
+        /*--------한/영/한/일-------*/
+        /*101번*/
+        @font-face {
+            font-family: 'JoseonPalace';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
+            font-weight: normal;
+            unicode-range: U+AC00-D7A3,
+            U+0041-005A, U+0061-007A,    /* 영문 대소문자 */
+            U+0030-0039,                /* 숫자 */
+            U+0021, U+0023, U+0026, U+0028-002E, U+003A-003B, U+003F-0040, U+005B, U+005D, U+005F /* 특수문자 */        
+            U+4E00-9FFF, U+F900-FAFF; /* 한문 */
+        }
+        /*102번*/
+        !@font-face {
+        font-family: 'Malgun Gothic';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.1/NanumGothic-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-display: swap;
+        } 
+        /*--------한/영/일-------*/
+        /*110번*/
+        @font-face {
+        font-family: 'Ansungtangmyeon';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/Ansungtangmyun-Bold.woff2') format('woff2');
+        font-weight: normal;
+        }
+        /*111번*/
+        @font-face {
+        font-family: 'ChusaSarang';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/ChusaLove.woff2') format('woff2');
+        font-weight: normal;
+        font-display: swap;
+        }
+        /*112번*/
+        @font-face {
+        font-family: 'Florence';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_Firenze.woff2') format('woff2');
+        font-weight: normal;
+        font-display: swap;
+        }
+        /*---------한/영----------*/
+        /*120번*/
+        @font-face {
+        font-family: 'SchoolSafetyWizard';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMabeopsaR.woff2') format('woff2');
+        font-weight: normal;
+        font-display: swap;
+        }
+        /*121번*/
+        @font-face {
+        font-family: 'GaviaNapjakblock';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NapjakBlock.woff') format('woff');
+        font-weight: normal;
+        font-display: swap;
+        }
+        /*122번*/
+        @font-face {
+            font-family: 'NexonBazzi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+            font-weight: normal;
+            font-display: swap;
+        }
+        /*123번*/
+        @font-face {
+            font-family: 'Diary';
+            src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        }  
+        /*124번*/
+        @font-face {
+            font-family: 'PalchilmmDailyItalic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201@1.0/87MMILSANG-Oblique.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        }
+        /*125번*/
+        @font-face {
+            font-family: 'KccAnchangho';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/KCC-Ahnchangho.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        }
+        /*126번*/
+        @font-face {
+        font-family: 'Cooljazz';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Cooljazz'), url('https://fonts.cdnfonts.com/s/14174/Cooljazz.woff') format('woff');
+        }
+        /*127번*/
+        @font-face {
+        font-family: 'SolmoeKimDaegeon';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/kdg_Light.woff') format('woff');
+        font-weight: normal;
+        font-display: swap;
+        }
+        /*128번*/
+        @font-face {
+        font-family: 'GabiaCheongyeon';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GabiaCheongyeon.woff2') format('woff2');
+        font-weight: normal;
+        font-display: swap;
+        }
+        /*129번*/
+        @font-face {
+            font-family: 'JeonnamEducationYuna';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-1@1.0/JNE-Yuna-TTF-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        }
+        /*130번*/
+        @font-face {
+            font-family: 'NotGothicButGoding';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_05@1.0/Gothic_Goding.woff') format('woff');
+            font-weight: normal;
+            font-display: swap;
+        }
+        /*131번*/
+        @font-face {
+            font-family: 'OngleipWFontList';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2501-1@1.1/Ownglyph_wiseelist-Rg.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        }
+        /*132번*/
+        @font-face {
+            font-family: 'WoodGarden';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_10@1.0/Treegarden.woff') format('woff');
+            font-weight: normal;
+            font-display: swap;
+        }
+        /*---------영----------*/
+        /*151번*/
+        @font-face {
+            font-family: 'YeongjuSeonbi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403@1.0/YEONGJUSeonbiTTF.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        }
+
+    </style>
 </head>
 <body>
     <div id="container">
@@ -39,7 +199,7 @@
             <div id="Button_Box">
                 <ul>
                     <li class="button_1">모든<br> 서체 보기</li>
-                    <li class="button_2">한글/영어/한자/일본어<br>가능 서체 보기</li>
+                    <li class="button_2">한글/영어/한문/일본어<br>가능 서체 보기</li>
                     <li class="button_3">한글/영어/일본어<br>가능 서체 보기</li>
                     <li class="button_4">한글/영어<br> 가능 서체 보기</li>
                     <li class="button_5">영어<br>가능 서체 보기</li>
@@ -48,13 +208,14 @@
 
         <!--폰트 미리보기 버튼-->
             <div id="Preview_Box">
-            <!--모든 폰트-->
+            <!--===========================모든 서체 버튼====================-->
                 <ul class="all_font">
+                    <div><p>한글/영어/한문/일본어 가능 폰트</p></div>
                     <!--한/영/한/일-101번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box101 ko en han jp num sp">
                             <li>
-                                <h5>101번</h5>
+                                <h5>101번 <button>복사</button></h5>
                                 <h5>(한글/영어/한문/일본어)</h5>
                             </li>
                             <li>
@@ -71,9 +232,9 @@
                     </li>
                     <!--한/영/한/일-102번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box102 ko en han jp num sp">
                             <li>
-                                <h5>102번</h5>
+                                <h5>102번 <button>복사</button></h5>
                                 <h5>(한글/영어/한문/일본어)</h5>
                             </li>
                             <li>
@@ -88,11 +249,12 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>
+                    <div><p>한글/영어/일본어 가능 폰트</p></div>                    
                     <!--한/영/일-110번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box110 ko en jp num sp">
                             <li>
-                                <h5>110번</h5>
+                                <h5>110번<button>복사</button></h5>
                                 <h5>(한글/영어/일본어)</h5>
                             </li>
                             <li>
@@ -109,9 +271,9 @@
                     </li>
                     <!--한/영/일-111번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box111 ko en jp num sp">
                             <li>
-                                <h5>111번</h5>
+                                <h5>111번<button>복사</button></h5>
                                 <h5>(한글/영어/일본어)</h5>
                             </li>
                             <li>
@@ -128,9 +290,9 @@
                     </li>           
                     <!--한/영/일-112번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box112 ko en jp num sp">
                             <li>
-                                <h5>112번</h5>
+                                <h5>112번<button>복사</button></h5>
                                 <h5>(한글/영어/일본어)</h5>
                             </li>
                             <li>
@@ -145,11 +307,12 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>
+                    <div><p>한글/영어 가능 폰트</p></div>
                     <!--한/영-120번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box120 ko en num sp">
                             <li>
-                                <h5>120번</h5>
+                                <h5>120번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -166,9 +329,9 @@
                     </li>
                     <!--한/영-121번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box121 ko en num sp">
                             <li>
-                                <h5>121번</h5>
+                                <h5>121번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -185,9 +348,9 @@
                     </li>
                     <!--한/영-122번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box122 ko en num sp">
                             <li>
-                                <h5>122번</h5>
+                                <h5>122번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -204,9 +367,9 @@
                     </li>
                     <!--한/영-123번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box123 ko en num sp">
                             <li>
-                                <h5>123번</h5>
+                                <h5>123번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -223,9 +386,9 @@
                     </li>
                     <!--한/영-124번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box124 ko en num sp">
                             <li>
-                                <h5>124번</h5>
+                                <h5>124번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -242,9 +405,9 @@
                     </li>  
                     <!--한/영-125번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box125 ko en num sp">
                             <li>
-                                <h5>125번</h5>
+                                <h5>125번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -261,9 +424,9 @@
                     </li>              
                     <!--한/영-126번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box126 ko en num sp">
                             <li>
-                                <h5>126번</h5>
+                                <h5>126번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -280,9 +443,9 @@
                     </li>  
                     <!--한/영-127번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box127 ko en num sp">
                             <li>
-                                <h5>127번</h5>
+                                <h5>127번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -299,9 +462,9 @@
                     </li>
                     <!--한/영-128번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box128 ko en num sp">
                             <li>
-                                <h5>128번</h5>
+                                <h5>128번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -318,9 +481,9 @@
                     </li>    
                     <!--한/영-129번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box129 ko en num sp">
                             <li>
-                                <h5>129번</h5>
+                                <h5>129번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -337,9 +500,9 @@
                     </li>
                     <!--한/영-130번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box130 ko en num sp">
                             <li>
-                                <h5>130번</h5>
+                                <h5>130번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -356,9 +519,9 @@
                     </li> 
                     <!--한/영-131번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box131 ko en num sp">
                             <li>
-                                <h5>131번</h5>
+                                <h5>131번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -375,9 +538,9 @@
                     </li>
                     <!--한/영-132번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box132 ko en num sp">
                             <li>
-                                <h5>132번</h5>
+                                <h5>132번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -391,12 +554,13 @@
                             <!--폰트 적용된 텍스트 받는 곳-->
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
-                    </li>  
-                   <!--영-151번-->
+                    </li>
+                    <div><p>영어 가능 폰트</p></div>
+                    <!--영-151번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box151 en num sp">
                             <li>
-                                <h5>151번</h5>
+                                <h5>151번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -411,11 +575,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>   
-                   <!--영-152번-->
+                    <!--영-152번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box152 en num sp">
                             <li>
-                                <h5>152번</h5>
+                                <h5>152번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -430,11 +594,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>     
-                   <!--영-153번-->
+                    <!--영-153번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box153 en num sp">
                             <li>
-                                <h5>153번</h5>
+                                <h5>153번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -449,11 +613,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>                                                                                                                                                                                                                                                                                                                                             
-                   <!--영-154번-->
+                    <!--영-154번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box154 en num sp">
                             <li>
-                                <h5>154번</h5>
+                                <h5>154번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -468,11 +632,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>              
-                   <!--영-155번-->
+                    <!--영-155번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box155 en num sp">
                             <li>
-                                <h5>155번</h5>
+                                <h5>155번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -487,11 +651,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>              
-                   <!--영-156번-->
+                    <!--영-156번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box156 en num sp">
                             <li>
-                                <h5>156번</h5>
+                                <h5>156번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -506,11 +670,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>              
-                   <!--영-157번-->
+                    <!--영-157번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box157 en num sp">
                             <li>
-                                <h5>157번</h5>
+                                <h5>157번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -525,11 +689,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>              
-                   <!--영-158번-->
+                    <!--영-158번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box158 en num sp">
                             <li>
-                                <h5>158번</h5>
+                                <h5>158번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -544,11 +708,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>    
-                   <!--영-159번-->
+                    <!--영-159번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box159 en num sp">
                             <li>
-                                <h5>159번</h5>
+                                <h5>159번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -563,11 +727,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>              
-                   <!--영-160번-->
+                    <!--영-160번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box160 en num sp">
                             <li>
-                                <h5>160번</h5>
+                                <h5>160번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -582,11 +746,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>  
-                   <!--영-161번-->
+                    <!--영-161번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box161 en num sp">
                             <li>
-                                <h5>161번</h5>
+                                <h5>161번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -601,11 +765,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>     
-                   <!--영-162번-->
+                    <!--영-162번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box162 en num sp">
                             <li>
-                                <h5>162번</h5>
+                                <h5>162번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -621,13 +785,13 @@
                         </ul>
                     </li>                                                                                                                      
                 </ul>
-            <!--한글/영어/한자/일본어 버튼-->
+                <!--===================한/영/한/일 버튼=================--->
                 <ul class="font4" style="display: none;">
                     <!--한/영/한/일-101번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box101 ko en han jp num sp">
                             <li>
-                                <h5>101번</h5>
+                                <h5>101번 <button>복사</button></h5>
                                 <h5>(한글/영어/한문/일본어)</h5>
                             </li>
                             <li>
@@ -644,9 +808,9 @@
                     </li>
                     <!--한/영/한/일-102번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box102 ko en han jp num sp">
                             <li>
-                                <h5>102번</h5>
+                                <h5>102번 <button>복사</button></h5>
                                 <h5>(한글/영어/한문/일본어)</h5>
                             </li>
                             <li>
@@ -660,15 +824,16 @@
                             <!--폰트 적용된 텍스트 받는 곳-->
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
-                    </li>                    
+                    </li>
                 </ul>
-            <!--한글/영어/일본어 버튼-->
+
+                <!--===============한/영/일 버튼==================--->
                 <ul class="font3" style="display: none;">
                     <!--한/영/일-110번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box110 ko en jp num sp">
                             <li>
-                                <h5>110번</h5>
+                                <h5>110번<button>복사</button></h5>
                                 <h5>(한글/영어/일본어)</h5>
                             </li>
                             <li>
@@ -685,9 +850,9 @@
                     </li>
                     <!--한/영/일-111번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box111 ko en jp num sp">
                             <li>
-                                <h5>111번</h5>
+                                <h5>111번<button>복사</button></h5>
                                 <h5>(한글/영어/일본어)</h5>
                             </li>
                             <li>
@@ -704,9 +869,9 @@
                     </li>           
                     <!--한/영/일-112번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box112 ko en jp num sp">
                             <li>
-                                <h5>112번</h5>
+                                <h5>112번<button>복사</button></h5>
                                 <h5>(한글/영어/일본어)</h5>
                             </li>
                             <li>
@@ -720,15 +885,16 @@
                             <!--폰트 적용된 텍스트 받는 곳-->
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
-                    </li>                    
+                    </li>
                 </ul>
-            <!--한글/영어 버튼-->
+
+                <!--========================한/영 버튼======================-->
                 <ul class="font2" style="display: none;">
-                    <!--한/영-120번-->
+                                        <!--한/영-120번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box120 ko en num sp">
                             <li>
-                                <h5>120번</h5>
+                                <h5>120번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -745,9 +911,9 @@
                     </li>
                     <!--한/영-121번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box121 ko en num sp">
                             <li>
-                                <h5>121번</h5>
+                                <h5>121번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -764,9 +930,9 @@
                     </li>
                     <!--한/영-122번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box122 ko en num sp">
                             <li>
-                                <h5>122번</h5>
+                                <h5>122번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -783,9 +949,9 @@
                     </li>
                     <!--한/영-123번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box123 ko en num sp">
                             <li>
-                                <h5>123번</h5>
+                                <h5>123번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -802,9 +968,9 @@
                     </li>
                     <!--한/영-124번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box124 ko en num sp">
                             <li>
-                                <h5>124번</h5>
+                                <h5>124번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -821,9 +987,9 @@
                     </li>  
                     <!--한/영-125번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box125 ko en num sp">
                             <li>
-                                <h5>125번</h5>
+                                <h5>125번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -840,9 +1006,9 @@
                     </li>              
                     <!--한/영-126번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box126 ko en num sp">
                             <li>
-                                <h5>126번</h5>
+                                <h5>126번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -859,9 +1025,9 @@
                     </li>  
                     <!--한/영-127번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box127 ko en num sp">
                             <li>
-                                <h5>127번</h5>
+                                <h5>127번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -878,9 +1044,9 @@
                     </li>
                     <!--한/영-128번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box128 ko en num sp">
                             <li>
-                                <h5>128번</h5>
+                                <h5>128번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -897,9 +1063,9 @@
                     </li>    
                     <!--한/영-129번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box129 ko en num sp">
                             <li>
-                                <h5>129번</h5>
+                                <h5>129번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -916,9 +1082,9 @@
                     </li>
                     <!--한/영-130번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box130 ko en num sp">
                             <li>
-                                <h5>130번</h5>
+                                <h5>130번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -935,9 +1101,9 @@
                     </li> 
                     <!--한/영-131번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box131 ko en num sp">
                             <li>
-                                <h5>131번</h5>
+                                <h5>131번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -954,9 +1120,9 @@
                     </li>
                     <!--한/영-132번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box132 ko en num sp">
                             <li>
-                                <h5>132번</h5>
+                                <h5>132번<button>복사</button></h5>
                                 <h5>(한글/영어)</h5>
                             </li>
                             <li>
@@ -970,15 +1136,16 @@
                             <!--폰트 적용된 텍스트 받는 곳-->
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
-                    </li>                      
+                    </li>
                 </ul>
-            <!--영어 폰트-->
+
+                <!--======================영어 버튼==========================-->
                 <ul class="font1" style="display: none;">
-                   <!--영-151번-->
+                                        <!--영-151번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box151 en num sp">
                             <li>
-                                <h5>151번</h5>
+                                <h5>151번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -993,11 +1160,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>   
-                   <!--영-152번-->
+                    <!--영-152번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box152 en num sp">
                             <li>
-                                <h5>152번</h5>
+                                <h5>152번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -1012,11 +1179,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>     
-                   <!--영-153번-->
+                    <!--영-153번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box153 en num sp">
                             <li>
-                                <h5>153번</h5>
+                                <h5>153번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -1031,11 +1198,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>                                                                                                                                                                                                                                                                                                                                             
-                   <!--영-154번-->
+                    <!--영-154번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box154 en num sp">
                             <li>
-                                <h5>154번</h5>
+                                <h5>154번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -1050,11 +1217,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>              
-                   <!--영-155번-->
+                    <!--영-155번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box155 en num sp">
                             <li>
-                                <h5>155번</h5>
+                                <h5>155번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -1069,11 +1236,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>              
-                   <!--영-156번-->
+                    <!--영-156번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box156 en num sp">
                             <li>
-                                <h5>156번</h5>
+                                <h5>156번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -1088,11 +1255,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>              
-                   <!--영-157번-->
+                    <!--영-157번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box157 en num sp">
                             <li>
-                                <h5>157번</h5>
+                                <h5>157번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -1107,11 +1274,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>              
-                   <!--영-158번-->
+                    <!--영-158번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box158 en num sp">
                             <li>
-                                <h5>158번</h5>
+                                <h5>158번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -1126,11 +1293,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>    
-                   <!--영-159번-->
+                    <!--영-159번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box159 en num sp">
                             <li>
-                                <h5>159번</h5>
+                                <h5>159번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -1145,11 +1312,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>              
-                   <!--영-160번-->
+                    <!--영-160번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box160 en num sp">
                             <li>
-                                <h5>160번</h5>
+                                <h5>160번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -1164,11 +1331,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>  
-                   <!--영-161번-->
+                    <!--영-161번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box161 en num sp">
                             <li>
-                                <h5>161번</h5>
+                                <h5>161번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -1183,11 +1350,11 @@
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
                     </li>     
-                   <!--영-162번-->
+                    <!--영-162번-->
                     <li>
-                        <ul class="font_box">
+                        <ul class="font_box font_box162 en num sp">
                             <li>
-                                <h5>162번</h5>
+                                <h5>162번<button>복사</button></h5>
                                 <h5>(영어)</h5>
                             </li>
                             <li>
@@ -1201,7 +1368,7 @@
                             <!--폰트 적용된 텍스트 받는 곳-->
                             <li class="intext"><h6>텍스트 받는 곳</h6></li>
                         </ul>
-                    </li>  
+                    </li>   
                 </ul>
             </div>
         </main>

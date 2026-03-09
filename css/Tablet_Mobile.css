@@ -1,5 +1,6 @@
 /*반응형 css파일*/
 
+/*1600px 이하*/
 @media (max-width: 1600px) {
     /*각인 안내사항*/
     main{
@@ -25,6 +26,7 @@
     }
     .button>#FontPreview{
     height: 4rem;
+    font-size: 1.2vW;
     }
 
     /*폰트 리스트*/
@@ -33,7 +35,25 @@
     #Preview_Box>.font3,
     #Preview_Box>.font2,
     #Preview_Box>.font1{
-    width: 80%;
+    width: 90%;
+    gap: 6% 4%;
+    }
+    #Preview_Box>.all_font>li,
+    #Preview_Box>.font4>li,
+    #Preview_Box>.font3>li,
+    #Preview_Box>.font2>li,
+    #Preview_Box>.font1>li{
+    height: 87%;
+    }
+    .font_box>li:nth-child(1)>h5:nth-child(1){
+    font-size: 30px;
+    }
+    .font_box>li:nth-child(3)>h6{
+    font-size: 30px;
+    line-height: 120%;
+    }
+    .font_box>li>h5>button{
+    margin-left: 14px;
     }
 }
 
@@ -51,13 +71,13 @@
 
     /*텍스트 입력*/
     #Input_Box{
-        height: 4rem;
+        height: 20%;
     }    
     #Input_Box>.button{
     width: 70%;
     }
     .button>#FontPreview {
-    font-size: 1.5vW;
+    font-size: 1.4vW;
     }
     .button>.preview_button {
     width: 14%;
@@ -93,6 +113,7 @@
     #Preview_Box>.font2>li,
     #Preview_Box>.font1>li{
     width: 30%;
+    height: 84%;
     overflow-wrap: break-word;
     }
     .font_box>li>h5{
@@ -103,7 +124,9 @@
     padding: 0 1rem;
     margin-bottom: 0.2rem;
     }
-
+    .font_box>li:nth-child(3)>h6{
+    line-height: 110%;
+    }
 }
 
 
@@ -133,6 +156,9 @@
     }
 
     /*텍스트입력*/
+    #Input_Box{
+        height: 40%;
+    }
     .button>#FontPreview{
         font-size: 1.6vw;
     }
@@ -166,26 +192,42 @@
 
     /*폰트 리스트*/
     #Preview_Box{
-        margin-top: 2rem;
+    margin-top: 2rem;
+    font-size: 1.4vW;
+    height: 110%;
     }
     #Preview_Box>.all_font,
     #Preview_Box>.font4,
     #Preview_Box>.font3,
     #Preview_Box>.font2,
     #Preview_Box>.font1{
-        gap: 2% 6%;
+    width: 100%;
+    gap: 20% 2%;
+    height: 100%;
     }
     #Preview_Box>.all_font>li,
     #Preview_Box>.font4>li,
     #Preview_Box>.font3>li,
     #Preview_Box>.font2>li,
     #Preview_Box>.font1>li{
-    width: 45%;
-    overflow-wrap: break-word;
+    width: 30%;
+    height: 100%;
+    line-height: 200%;
     }
     .font_box>li>h5{
-        font-size: 2.2vW;
-        padding: 0.1rwm;
+    font-size: 2vW;
+    padding: 0.1rem;
+    }
+    .font_box>li>h5:nth-child(2){
+    font-size: 1.6vW;
+    }
+    .font_box>li>p{
+    font-size: 1.6vW;
+    padding: 1px 0;
+    margin: 0 auto;
+    }
+    .font_box>li:nth-child(3)>h6{
+    width: 98%;
     }
 }
 
@@ -196,7 +238,7 @@
     height: 16rem;
     }
     #Notice>ul{
-        width: 90%;
+    width: 90%;
     }
     #Notice>ul>li{
     font-size: 2.2vw;
@@ -209,7 +251,10 @@
 
     /*텍스트 입력*/
     #Input_Box{
-    height: 2rem;
+    height: 20%;
+    }
+    .button{
+    height: 80%;
     }
     #Input_Box>.button{
     width: 80%;
@@ -217,7 +262,8 @@
     }
     .button>#FontPreview{
     width: 90%;
-    padding: 0.4rem;
+    height: 90%;
+    padding: 0;
     }
     .button>.preview_button{
     width: 18%;
@@ -235,31 +281,86 @@
     }
 
     /*폰트 리스트*/
+    #Preview_Box{
+    margin: 0 auto;
+    }
+    .font_box{height: 110%;}
+    .font_box>li{
+    height: 30%;
+    }
     #Preview_Box>.all_font,
     #Preview_Box>.font4,
     #Preview_Box>.font3,
     #Preview_Box>.font2,
     #Preview_Box>.font1 {
-    gap: 20% 6%;
+    margin: 0 auto;
+    gap: 22% 6%;
     }
     #Preview_Box>.all_font>li,
     #Preview_Box>.font4>li,
     #Preview_Box>.font3>li,
     #Preview_Box>.font2>li,
     #Preview_Box>.font1>li{
+    width: 46%;
     margin: 0;
     height: 100%;
     }
-    .font_box>li>h5{
-    font-size: 2vW;
+    .font_box>li:nth-child(1){
+    height: 20%;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    gap: 2px;
+    align-items: center;
     }
+    .font_box>li:nth-child(1)>h5{
+    padding: 4px 0;
+    }
+    .font_box>li:nth-child(1)>h5:nth-child(1){
+    font-size: 18px;
+    }
+    .font_box>li:nth-child(1)>h5:nth-child(2){
+    font-size: 12px;
+    }
+    
+    .font_box>li:nth-child(2){
+    height: 60%;
+    }
+    .font_box>li>h5:nth-child(2){
+    font-size: 10px;
+    }
+    .font_box>li:nth-child(2)>p{
+    margin: 0 auto;
+    padding: 4px 4px;
+    font-size: 12px;
+    line-height: 120%;
+    }
+    
+    .font_box>li:nth-child(3){
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    margin: 0;
+    }
+    .font_box>li:nth-child(3)>h6{
+    font-size: 16px;
+    line-height: 140%;
+    }
+ 
     .font_box>li>p{
     font-size: 2vW;
+    padding: 4px;
+    margin: 0;
     }
+
     .font_box>.intext{
-    padding: 1rem;
+    padding: 0.6rem 0.2rem;
     }
     .font_box>.intext>h6{
-    font-size: 0.8rem;
+    font-size: 8px;
+    line-height: 100%;
+    width: 100%;
     }
+
 }

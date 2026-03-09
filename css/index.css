@@ -18,7 +18,138 @@ header{
     display: flex;
     align-items: center;
 }
-/*각인 안내사항*/
+/*--------------폰트 적용---------------*/
+/*--------한/영/한/일-------*/
+/*101번*/
+.font_box101>li{
+    font-family: 'JoseonPalace';
+}
+/*102번*/
+.font_box102>li{
+    font-family:'Malgun Gothic';
+}
+
+/*--------한/영/일-------*/
+/*110번*/
+.font_box110>li{
+    font-family: 'Ansungtangmyeon';
+}
+/*111번*/
+.font_box111>li{
+    font-family: 'ChusaSarang';
+}
+/*112번*/
+.font_box112>li{
+    font-family: 'Florence';
+}
+
+/*--------한/영-------*/
+/*120번*/
+.font_box120>li{
+    font-family: 'SchoolSafetyWizard';
+}
+/*121번*/
+.font_box121>li{
+    font-family: 'GaviaNapjakblock';
+}
+/*122번*/
+.font_box122>li{
+    font-family: 'NexonBazzi';
+}
+/*123번*/
+.font_box123>li{
+    font-family: 'Diary';
+}
+/*124번*/
+.font_box124>li{
+    font-family: 'PalchilmmDailyItalic';
+}
+/*125번*/
+.font_box125>li{
+    font-family: 'KccAnchangho';
+}
+/*126번*/
+.font_box126>li{
+    font-family: 'Cooljazz', sans-serif;
+}
+/*127번*/
+.font_box127>li{
+    font-family: 'SolmoeKimDaegeon';
+}
+/*128번*/
+.font_box128>li{
+    font-family: 'GabiaCheongyeon';
+}
+/*129번*/
+.font_box129>li{
+    font-family: 'JeonnamEducationYuna';
+}
+/*130번*/
+.font_box130>li{
+    font-family: 'NotGothicButGoding';
+}
+/*131번*/   
+.font_box131>li{
+    font-family: 'OngleipWFontList';
+}
+/*132번*/   
+.font_box132>li{
+    font-family: 'WoodGarden';
+}
+
+/*---------영----------*/
+/*151번*/
+.font_box151>li{
+    font-family: 'YeongjuSeonbi';
+}
+/*152번*/
+.font_box152>li{
+    font-family: "Bradley Hand ITC", cursive;
+}
+/*153번*/
+.font_box153>li{
+    font-family: "Monotype Corsiva", cursive;
+}
+/*154번*/
+.font_box154>li{
+    font-family: "Mistral", cursive;
+}
+/*155번*/
+.font_box155>li{
+    font-family: "Continuous", cursive;
+}
+/*156번*/
+.font_box156>li{
+    font-family: "Blacksword", cursive;
+}
+/*157번*/
+.font_box157>li{
+    font-family: "Dancing Script", cursive;
+}
+/*158번*/
+.font_box158>li{
+    font-family: "Parisienne", cursive;
+}
+/*159번*/
+.font_box159>li{
+    font-family: "Alex Brush", cursive;
+}
+/*160번*/
+.font_box160>li{
+    font-family: "Great Vibes", cursive;
+}
+/*161번*/
+.font_box161>li{
+    font-family: "Edwardian Script", cursive;
+}
+/*162번*/
+.font_box162>li{
+    font-family: "Inkburrow", cursive;
+}
+
+
+
+/*---------------각인 안내사항----------*/
 main{
     width: 100%;
     height: 24rem;
@@ -52,7 +183,7 @@ main{
     font-weight: 500;
 }
 
-/*텍스트 입력*/
+/*-----------------텍스트 입력-------------------*/
 #Input_Box{
     height: 4rem;
     width: 100%;
@@ -78,7 +209,8 @@ main{
     margin: 0;
 }
 
-/*서체 선택 버튼*/
+/*---------------서체 선택 버튼-----------------*/
+
 #Button_Box{
     width: 100%;
     height: 16rem;
@@ -106,23 +238,34 @@ main{
     justify-content: center;
     align-items: center;
 }
-
-/*폰트 리스트*/
+/*----------------------폰트 리스트---------------*/
 #Preview_Box{
-    width: 100%;
+    width: 80%;
     height: 100%;
+}
+#Preview_Box>ul>div{
+    width: 100%;
+    background-color: orange;
+    height: 6%;
+}
+#Preview_Box>ul>div>p{
+    text-align: center;
+}
+#Preview_Box>ul>li{
+    width: 100%;
+    margin: 0;
 }
 #Preview_Box>.all_font,
 #Preview_Box>.font4,
 #Preview_Box>.font3,
 #Preview_Box>.font2,
 #Preview_Box>.font1 {
-    width: 70%;
-    height: 90%;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    margin: 0 auto;
     justify-content: center;
-    gap: 20% 2%;
+    flex-wrap: wrap;
+    gap: 20% 10px;
 }
 #Preview_Box>.all_font>li,
 #Preview_Box>.font4>li,
@@ -130,38 +273,71 @@ main{
 #Preview_Box>.font2>li,
 #Preview_Box>.font1>li {
     overflow-wrap: break-word;
-    margin: 0.4rem 0;
     width: 20%;
-    height: 20rem;
+    line-height: 160%;
     background-color: rgb(213, 213, 213);
     list-style: none;
 }
 .font_box{
+    height: 100%;
     text-align: center;
 }
 .font_box>li{
     list-style: none;
 }
-.font_box>li:first-child{
-    margin-bottom: 1rem;
+.font_box>li:nth-child(1){
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    height: 80px;
+    margin: 0;
+    background-color: rgb(173, 173, 173);
+}
+.font_box>li:nth-child(2){
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+.font_box>li:nth-child(3){
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    height: 30px;
+    background-color: rgb(116, 116, 116)
 }
 .font_box>li>h5{
+    width: 100%;
     padding: 0.2rem 0;
     font-size: larger;
-    background-color: rgb(138, 138, 138);
+}
+.font_box>li>h5:nth-child(2){
+    font-size: 18px;
+}
+.font_box>li>h5>button{
+    padding: 1%;
+    margin-left: 10px;
+    border-style: none;
+}
+.font_box>li>h5>button:hover{
+    background-color: rgb(212, 212, 212);
 }
 .font_box>li>p{
     font-size: medium;
-    margin-bottom: 0.4rem;
-    padding: 0 1rem;
+    display: block;
+    width: 90%;
 }
 .font_box>.intext{
-    margin-top: 1.6rem;
-    padding: 1.4rem;
-    background-color: rgb(134, 134, 134);
+    margin-top: 0;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
 }
 .font_box>.intext>h6{
     font-size: large;
+    display: block;
 }
 
 
