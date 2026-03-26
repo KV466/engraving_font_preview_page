@@ -611,6 +611,7 @@ main{
     display: block;
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /*-----------------각인 패널-------------------*/

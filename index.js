@@ -121,8 +121,20 @@ $(function(){
             $h6.find('.pangram-line').each(function() {
                 var $line = $(this);
                 $line.css('font-size', baseFontSize + 'px');
-                if ($line[0].scrollWidth > containerWidth) {
-                    var newSize = baseFontSize * (containerWidth / $line[0].scrollWidth);
+
+                // 숨김 측정 요소로 실제 텍스트 폭 계산 (scrollWidth 대신)
+                var $measure = $('<span>').css({
+                    'font-size': baseFontSize + 'px',
+                    'white-space': 'nowrap',
+                    'position': 'absolute',
+                    'visibility': 'hidden'
+                }).text($line.text());
+                $h6.append($measure);  // font-family 상속
+                var textWidth = $measure[0].getBoundingClientRect().width;
+                $measure.remove();
+
+                if (textWidth > containerWidth) {
+                    var newSize = baseFontSize * (containerWidth / textWidth);
                     if (newSize < 10) newSize = 10;
                     $line.css('font-size', newSize + 'px');
                 }
@@ -361,6 +373,12 @@ $(function(){
         document.fonts.ready.then(function() {
             autoFitPangrams();
             setTimeout(autoFitPangrams, 1000);
+        });
+        // 폰트 로드 완료 시마다 재실행
+        document.fonts.addEventListener('loadingdone', function() {
+            if ($('#FontPreview').val().length === 0) {
+                autoFitPangrams();
+            }
         });
     } else {
         setTimeout(autoFitPangrams, 500);
