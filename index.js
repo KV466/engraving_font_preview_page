@@ -119,17 +119,6 @@ $(function(){
         }
     });
 
-    // === 서체 분류 버튼 ===
-    $('#Button_Box>ul>li').click(function() {
-        var index = $(this).index();
-
-        $('#Button_Box>ul>li').removeClass('active');
-        $(this).addClass('active');
-
-        $('#Preview_Box>ul').hide();
-        $('#Preview_Box>ul').eq(index).show();
-    });
-
     // === 서체 번호 복사 버튼 ===
     $('.font_box>li>h5>button').click(function(e) {
         e.stopPropagation();
@@ -280,15 +269,4 @@ $(function(){
         $('#EngravePanel').slideUp(200);
     });
 
-    // === 언어 컬러 뱃지 생성 ===
-    $('.font_box').each(function() {
-        var $box = $(this);
-        var $langLabel = $box.find('> li:first-child > h5:nth-child(2)');
-        var badges = [];
-        if ($box.hasClass('ko')) badges.push('<span class="lang-badge lang-ko">한글</span>');
-        if ($box.hasClass('en')) badges.push('<span class="lang-badge lang-en">영어</span>');
-        if ($box.hasClass('han')) badges.push('<span class="lang-badge lang-han">한문</span>');
-        if ($box.hasClass('jp')) badges.push('<span class="lang-badge lang-jp">일본어</span>');
-        $langLabel.html(badges.join(''));
-    });
 });

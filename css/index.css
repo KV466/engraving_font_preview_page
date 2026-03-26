@@ -432,77 +432,15 @@ main{
     color: #fff;
 }
 
-/*---------------서체 선택 버튼-----------------*/
-#Button_Box{
-    width: 100%;
-    padding: 1rem 0;
-}
-#Button_Box>ul{
-    width: 60%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
-    list-style: none;
-    padding: 0;
-}
-#Button_Box>ul>li{
-    flex: 1 1 auto;
-    min-width: 120px;
-    max-width: 200px;
-    padding: 1rem 0.5rem;
-    font-weight: 500;
-    font-size: clamp(14px, 1.2vw, 17px);
-    list-style: none;
-    background-color: #fff;
-    border: 2px solid #d4ccc0;
-    cursor: pointer;
-    border-radius: 16px;
-    text-align: center;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-}
-#Button_Box>ul>li:hover{
-    border-color: orange;
-}
-#Button_Box>ul>li.active{
-    background-color: orange;
-    color: #fff;
-    border-color: orange;
-}
-
 /*----------------------폰트 리스트---------------*/
 #Preview_Box{
     width: 80%;
     padding-bottom: 2rem;
 }
-#Preview_Box>ul>div{
-    grid-column: 1 / -1;
-    width: 100%;
-    background: linear-gradient(135deg, #ff9800, #ffb74d);
-    padding: 0.5rem 0;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-}
-#Preview_Box>ul>div>p{
-    text-align: center;
-    font-weight: 600;
-    font-size: clamp(16px, 1.3vw, 20px);
-    color: #fff;
-}
 #Preview_Box>ul>li{
     margin: 0;
 }
-#Preview_Box>.all_font,
-#Preview_Box>.font4,
-#Preview_Box>.font3,
-#Preview_Box>.font2,
-#Preview_Box>.font1{
+#Preview_Box>.all_font{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 16px;
@@ -510,11 +448,7 @@ main{
     padding: 0;
     list-style: none;
 }
-#Preview_Box>.all_font>li,
-#Preview_Box>.font4>li,
-#Preview_Box>.font3>li,
-#Preview_Box>.font2>li,
-#Preview_Box>.font1>li{
+#Preview_Box>.all_font>li{
     list-style: none;
     background-color: rgb(255, 255, 255);
     border-radius: 12px;
@@ -546,11 +480,6 @@ main{
     display: flex;
     align-items: center;
     gap: 4px;
-}
-.font_box>li:nth-child(1)>h5:nth-child(2){
-    width: 100%;
-    text-align: center;
-    font-size: clamp(14px, 1.1vw, 18px);
 }
 .font_box>li:nth-child(2){
     flex: 1;
@@ -618,21 +547,6 @@ main{
     background-color: #e67e22;
     color: #fff;
 }
-
-/*-----------------언어 뱃지-------------------*/
-.lang-badge{
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-size: 12px;
-    font-weight: 600;
-    margin: 0 2px;
-    color: #fff;
-}
-.lang-ko{ background-color: #e67e22; }
-.lang-en{ background-color: #3498db; }
-.lang-han{ background-color: #27ae60; }
-.lang-jp{ background-color: #8e44ad; }
 
 /*-----------------각인 패널-------------------*/
 #EngravePanel{
@@ -819,22 +733,6 @@ body.dark-mode .tool_darkmode button{
     background-color: #2a2a3e;
     color: #e0e0e0;
     border-color: #555;
-}
-body.dark-mode #Button_Box>ul>li{
-    background-color: #2a2a3e;
-    color: #e0e0e0;
-    border-color: #444;
-}
-body.dark-mode #Button_Box>ul>li:hover{
-    border-color: orange;
-}
-body.dark-mode #Button_Box>ul>li.active{
-    background-color: orange;
-    color: #fff;
-    border-color: orange;
-}
-body.dark-mode #Preview_Box>ul>div{
-    background-color: #cc8800;
 }
 body.dark-mode #Preview_Box>ul>li{
     background-color: #2a2a3e;
