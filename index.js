@@ -35,10 +35,14 @@ $(function(){
                     $warning.addClass('unsupported');
                 }
             } else {
-                var defaultText = $this.hasClass('ko')
-                    ? '다람쥐 헌 쳇바퀴에 타고파'
-                    : 'The quick brown fox jumps over the lazy dog';
-                $this.find('h6').text(defaultText);
+                var parts = [];
+                if ($this.hasClass('ko')) parts.push('다람쥐 헌 쳇바퀴에 타고파');
+                if ($this.hasClass('en')) parts.push(
+                    $this.hasClass('ko') ? 'The quick brown fox' : 'The quick brown fox jumps over the lazy dog'
+                );
+                if ($this.hasClass('han')) parts.push('花鳥風月');
+                if ($this.hasClass('jp')) parts.push('いろはにほへと');
+                $this.find('h6').html(parts.join('<br>'));
                 $warning.removeClass('unsupported');
             }
         });
@@ -167,8 +171,8 @@ $(function(){
     $('#Button_Box>ul>li').click(function() {
         var index = $(this).index();
 
-        $('#Button_Box>ul>li').css('background-color', '');
-        $(this).css('background-color', 'orange');
+        $('#Button_Box>ul>li').removeClass('active');
+        $(this).addClass('active');
 
         $('#Preview_Box>ul').hide();
         $('#Preview_Box>ul').eq(index).show();

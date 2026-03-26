@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background-color: rgb(237, 225, 215);
+    background-color: #f5f6f8;
 }
 
 #container{
@@ -11,12 +11,17 @@ body{
     margin: 0 auto;
 }
 header{
-    height: 2rem;
-    background-color: rgb(70, 70, 70);
-    padding: 2%;
+    height: auto;
+    background-color: #fff;
+    padding: 1.5rem 2%;
     text-align: center;
     display: flex;
     align-items: center;
+    border-bottom: 2px solid #f0f0f0;
+}
+header h1{
+    color: #222;
+    font-size: clamp(18px, 1.8vw, 28px);
 }
 /*--------------폰트 적용---------------*/
 /*--------한/영/한/일-------*/
@@ -280,11 +285,12 @@ main{
     align-items: center;
 }
 #Notice>ul{
-    background-color: #faf5ef;
+    background-color: #fff;
     border-radius: 40px;
     width: 40%;
     padding: 2rem;
     box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 #Notice>ul>h3{
     font-size: clamp(16px, 1.2vw, 20px);
@@ -440,7 +446,8 @@ main{
     font-weight: 500;
     font-size: clamp(12px, 1vw, 15px);
     list-style: none;
-    background-color: rgb(150, 150, 150);
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
     cursor: pointer;
     border-radius: 16px;
     text-align: center;
@@ -448,10 +455,15 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
 #Button_Box>ul>li:hover{
-    background-color: rgb(180, 180, 180);
+    border-color: orange;
+}
+#Button_Box>ul>li.active{
+    background-color: orange;
+    color: #fff;
+    border-color: orange;
 }
 
 /*----------------------폰트 리스트---------------*/
@@ -462,7 +474,7 @@ main{
 #Preview_Box>ul>div{
     grid-column: 1 / -1;
     width: 100%;
-    background-color: orange;
+    background: linear-gradient(135deg, #ff9800, #ffb74d);
     padding: 0.5rem 0;
     border-radius: 8px;
     margin-bottom: 0.5rem;
@@ -471,6 +483,7 @@ main{
     text-align: center;
     font-weight: 600;
     font-size: clamp(13px, 1.1vw, 18px);
+    color: #fff;
 }
 #Preview_Box>ul>li{
     margin: 0;
@@ -496,6 +509,7 @@ main{
     background-color: rgb(255, 255, 255);
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 .font_box{
     min-height: 200px;
@@ -505,11 +519,12 @@ main{
 }
 .font_box>li:nth-child(1){
     width: 100%;
-    background-color: gray;
+    background-color: #f8f8f8;
     padding: 0.5rem 0;
     display: flex;
     flex-flow: column;
     align-items: center;
+    border-bottom: 1px solid #eee;
 }
 .font_box>li:nth-child(1)>h5:nth-child(1){
     font-size: clamp(14px, 1.2vw, 22px);
@@ -561,7 +576,11 @@ body.dark-mode{
     background-color: #1a1a2e;
 }
 body.dark-mode header{
-    background-color: #0f0f1a;
+    background-color: #1a1a2e;
+    border-bottom-color: #333;
+}
+body.dark-mode header h1{
+    color: #e0e0e0;
 }
 body.dark-mode #Notice>ul{
     background-color: #2a2a3e;
@@ -591,8 +610,17 @@ body.dark-mode .tool_darkmode button{
     border-color: #555;
 }
 body.dark-mode #Button_Box>ul>li{
-    background-color: #3a3a4e;
+    background-color: #2a2a3e;
     color: #e0e0e0;
+    border-color: #444;
+}
+body.dark-mode #Button_Box>ul>li:hover{
+    border-color: orange;
+}
+body.dark-mode #Button_Box>ul>li.active{
+    background-color: orange;
+    color: #fff;
+    border-color: orange;
 }
 body.dark-mode #Preview_Box>ul>div{
     background-color: #cc8800;
