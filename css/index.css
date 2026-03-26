@@ -369,8 +369,14 @@ main{
     font-weight: 600;
     white-space: nowrap;
 }
+.tool_size{
+    flex: 1;
+    min-width: 0;
+}
 .tool_size input[type="range"]{
-    width: 80px;
+    flex: 1;
+    min-width: 60px;
+    max-width: 300px;
     cursor: pointer;
 }
 .tool_size span{

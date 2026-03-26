@@ -65,7 +65,7 @@ $(function(){
                 var parts = [];
                 if ($this.hasClass('ko')) parts.push('다람쥐 헌 쳇바퀴에 타고파');
                 if ($this.hasClass('en')) parts.push(
-                    $this.hasClass('ko') ? 'The quick brown fox' : 'The quick brown fox jumps over the lazy dog'
+                    $this.hasClass('ko') ? 'The quick brown fox' : 'Sphinx of black quartz, judge my vow'
                 );
                 if ($this.hasClass('han')) parts.push('花鳥風月');
                 if ($this.hasClass('jp')) parts.push('いろはにほへと');
@@ -122,16 +122,12 @@ $(function(){
                 var $line = $(this);
                 $line.css('font-size', baseFontSize + 'px');
 
-                // 숨김 측정 요소로 실제 텍스트 폭 계산 (scrollWidth 대신)
-                var $measure = $('<span>').css({
-                    'font-size': baseFontSize + 'px',
-                    'white-space': 'nowrap',
-                    'position': 'absolute',
-                    'visibility': 'hidden'
-                }).text($line.text());
-                $h6.append($measure);  // font-family 상속
-                var textWidth = $measure[0].getBoundingClientRect().width;
-                $measure.remove();
+                // canvas.measureText()로 텍스트 폭 계산 (DOM 측정 부정확 회피)
+                var fontFamily = $h6.css('font-family');
+                var canvas = autoFitPangrams._canvas || (autoFitPangrams._canvas = document.createElement('canvas'));
+                var ctx = canvas.getContext('2d');
+                ctx.font = baseFontSize + 'px ' + fontFamily;
+                var textWidth = ctx.measureText($line.text()).width;
 
                 if (textWidth > containerWidth) {
                     var newSize = baseFontSize * (containerWidth / textWidth);
@@ -186,9 +182,9 @@ $(function(){
     $('#DarkModeToggle').on('click', function() {
         $('body').toggleClass('dark-mode');
         if ($('body').hasClass('dark-mode')) {
-            $(this).text('라이트모드');
+            $(this).text('밝은 화면');
         } else {
-            $(this).text('다크모드');
+            $(this).text('어두운 화면');
         }
     });
 
