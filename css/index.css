@@ -549,6 +549,19 @@ main{
     background-color: rgba(255, 255, 255, 0.92);
     border-radius: 12px;
 }
+/*-----------------추천 뱃지-------------------*/
+.font_box.best>li:nth-child(1)::before{
+    content: '추천';
+    display: inline-block;
+    padding: 2px 10px;
+    background: linear-gradient(135deg, #ff6b00, #ff9800);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 10px;
+    letter-spacing: 0.05em;
+}
+
 .font_box>li>h5>button{
     margin-left: 6px;
     padding: 2px 8px;
@@ -832,7 +845,4 @@ body.dark-mode .engrave-item-actions button{
 }
 body.dark-mode .engrave-empty{
     color: #777;
-}
-body.dark-mode #Notice>ul{
-    border-color: #444;
 }
