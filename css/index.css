@@ -204,12 +204,16 @@ header{
 }
 /*155번*/
 @font-face {
-    font-family: '155' !important;
-    src: url(../font/continuous.woff2) format('woff2');
+    font-family: 'Continuous';
+    src: url(../font/Continuous.woff2) format('woff2'),
+        url(../font/Continuous.woff) format('woff'),
+        url(../font/Continuous.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
     font-display: swap;
 }
 .font_box155>li{
-    font-family: '155';
+    font-family: 'Continuous' !important;
 }
 /*156번*/
 @font-face {
