@@ -181,7 +181,7 @@ header{
 /*152번*/
 @font-face {
     font-family: '152';
-    src: url(../font/BradleyHandITCTT.ttf) format('truetype');
+    src: url(../font/BradleyHandITCTT.woff2) format('woff2');
 }
 .font_box152>li{
     font-family: '152';
@@ -189,7 +189,7 @@ header{
 /*153번*/
 @font-face {
     font-family: '153';
-    src: url(../font/Monotype-Corsiva-Regular.ttf) format('truetype');
+    src: url(../font/MonotypeCorsivaRegular.woff2) format('woff2');
 }
 .font_box153>li{
     font-family: '153';
@@ -205,7 +205,7 @@ header{
 /*155번*/
 @font-face {
     font-family: '155';
-    src: url(../font/continuous.ttf) format('truetype');
+    src: url(../font/continuous.woff2) format('woff2');
 }
 .font_box155>li{
     font-family: '155';
@@ -213,7 +213,7 @@ header{
 /*156번*/
 @font-face {
     font-family: '156';
-    src: url(../font/Blacksword.otf) format('truetype');
+    src: url(../font/Blacksword.woff2) format('woff2');
 }
 .font_box156>li{
     font-family: '156';
