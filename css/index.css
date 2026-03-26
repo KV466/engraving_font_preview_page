@@ -31,6 +31,7 @@ header h1{
 /*101번*/
 @font-face {
     font-family: '101';
+    font-weight: bold;
     src: url(../font/ChosunGs.TTF) format('truetype');
 }
 .font_box101>li{
@@ -39,6 +40,7 @@ header h1{
 /*102번*/
 @font-face {
     font-family: '102';
+    font-weight: bold;
     src: url(../font/malgun.woff) format('woff');
 }
 .font_box102>li{
@@ -49,6 +51,7 @@ header h1{
 /*110번*/
 @font-face {
     font-family: '110';
+    font-weight: bold;
     src: url(../font/Ansungtangmyun-Bold.ttf) format('truetype');
 }
 .font_box110>li{
@@ -57,6 +60,7 @@ header h1{
 /*111번*/
 @font-face {
     font-family: '111';
+    font-weight: bold;
     src: url(../font/ChusaLove.ttf) format('truetype');
 }
 .font_box111>li{
@@ -65,6 +69,7 @@ header h1{
 /*112번*/
 @font-face {
     font-family: '112';
+    font-weight: bold;
     src: url(../font/EF_Firenze.ttf) format('truetype');
 }
 .font_box112>li{
@@ -75,6 +80,7 @@ header h1{
 /*120번*/
 @font-face {
     font-family: '120';
+    font-weight: bold;
     src: url(../font/HakgyoansimMabeopsaR.ttf) format('truetype');
 }
 .font_box120>li{
@@ -83,6 +89,7 @@ header h1{
 /*121번*/
 @font-face {
     font-family: '121';
+    font-weight: bold;
     src: url(../font/gabia_napjakBlock.ttf) format('truetype');
 }
 .font_box121>li{
@@ -91,6 +98,7 @@ header h1{
 /*122번*/
 @font-face {
     font-family: '122';
+    font-weight: bold;
     src: url(../font/Bazzi.ttf) format('truetype');
 }
 .font_box122>li{
@@ -99,7 +107,9 @@ header h1{
 /*123번*/
 @font-face {
     font-family: '123';
-    src: url(../font/EF_Diary.ttf) format('truetype');
+    font-weight: bold;
+    src: url(../font/EF_Diary.woff2) format('woff2'),
+         url(../font/EF_Diary.ttf) format('truetype');
 }
 .font_box123>li{
     font-family: '123';
@@ -107,6 +117,7 @@ header h1{
 /*124번*/
 @font-face {
     font-family: '124';
+    font-weight: bold;
     src: url(../font/87MMILSANG-Oblique.ttf) format('truetype');
 }
 .font_box124>li{
@@ -115,6 +126,7 @@ header h1{
 /*125번*/
 @font-face {
     font-family: '125';
+    font-weight: bold;
     src: url(../font/KCC-Ahnchangho.ttf) format('truetype');
 }
 .font_box125>li{
@@ -123,6 +135,7 @@ header h1{
 /*126번*/
 @font-face {
     font-family: '126';
+    font-weight: bold;
     src: url(../font/Cooljazz.ttf) format('truetype');
 }
 .font_box126>li{
@@ -130,6 +143,7 @@ header h1{
 }
 @font-face {
     font-family: '127';
+    font-weight: bold;
     src: url(../font/솔뫼김대건Light.ttf) format('truetype');
 }
 /*127번*/
@@ -139,6 +153,7 @@ header h1{
 /*128번*/
 @font-face {
     font-family: '128';
+    font-weight: bold;
     src: url(../font/GabiaCheongyeon.ttf) format('truetype');
 }
 .font_box128>li{
@@ -147,6 +162,7 @@ header h1{
 /*129번*/
 @font-face {
     font-family: '129';
+    font-weight: bold;
     src: url(../font/전남교육유나체Regular.ttf) format('truetype');
 }
 .font_box129>li{
@@ -155,6 +171,7 @@ header h1{
 /*130번*/
 @font-face {
     font-family: '130';
+    font-weight: bold;
     src: url(../font/나눔손글씨고딕아니고고딩.ttf) format('truetype');
 }
 .font_box130>li{
@@ -163,6 +180,7 @@ header h1{
 /*131번*/  
 @font-face {
     font-family: '131';
+    font-weight: bold;
     src: url(../font/온글잎위씨리스트.ttf) format('truetype');
 }
 .font_box131>li{
@@ -171,6 +189,7 @@ header h1{
 /*132번*/
 @font-face {
     font-family: '132';
+    font-weight: bold;
     src: url(../font/나눔손글씨나무정원.ttf) format('truetype');
 }
 .font_box132>li{
@@ -181,6 +200,7 @@ header h1{
 /*151번*/
 @font-face {
     font-family: '151';
+    font-weight: bold;
     src: url(../font/YEONGJUSeonbi.ttf) format('truetype');
 }
 .font_box151>li{
@@ -189,6 +209,7 @@ header h1{
 /*152번*/
 @font-face {
     font-family: '152';
+    font-weight: bold;
     src: url(../font/BradleyHandITCTT.woff2) format('woff2');
 }
 .font_box152>li{
@@ -197,6 +218,7 @@ header h1{
 /*153번*/
 @font-face {
     font-family: '153';
+    font-weight: bold;
     src: url(../font/MonotypeCorsivaRegular.woff2) format('woff2');
 }
 .font_box153>li{
@@ -205,6 +227,7 @@ header h1{
 /*154번*/
 @font-face {
     font-family: '154';
+    font-weight: bold;
     src: url(../font/MISTRAL.TTF) format('truetype');
 }
 .font_box154>li{
@@ -213,6 +236,7 @@ header h1{
 /*155번*/
 @font-face {
     font-family: '155';
+    font-weight: bold;
     src: url(../font/Continuous.woff2) format('woff2');
 }
 .font_box155>li{
@@ -221,6 +245,7 @@ header h1{
 /*156번*/
 @font-face {
     font-family: '156';
+    font-weight: bold;
     src: url(../font/Blacksword.woff2) format('woff2');
 }
 .font_box156>li{
@@ -229,6 +254,7 @@ header h1{
 /*157번*/
 @font-face {
     font-family: '157';
+    font-weight: bold;
     src: url(../font/DancingScript-Regular.ttf) format('truetype');
 }
 .font_box157>li{
@@ -237,6 +263,7 @@ header h1{
 /*158번*/
 @font-face {
     font-family: '158';
+    font-weight: bold;
     src: url(../font/Parisienne-Regular.ttf) format('truetype');
 }
 .font_box158>li{
@@ -245,6 +272,7 @@ header h1{
 /*159번*/
 @font-face {
     font-family: '159';
+    font-weight: bold;
     src: url(../font/AlexBrush-Regular.ttf) format('truetype');
 }
 .font_box159>li{
@@ -253,6 +281,7 @@ header h1{
 /*160번*/
 @font-face {
     font-family: '160';
+    font-weight: bold;
     src: url(../font/GreatVibes-Regular.otf) format('opentype');
 }
 .font_box160>li{
@@ -261,6 +290,7 @@ header h1{
 /*161번*/
 @font-face {
     font-family: '161';
+    font-weight: bold;
     src: url(../font/Edwardian_Script.TTF) format('truetype');
 }
 .font_box161>li{
@@ -269,6 +299,7 @@ header h1{
 /*162번*/
 @font-face {
     font-family: '162';
+    font-weight: bold;
     src: url(../font/inkburrow.ttf) format('truetype');
 }
 .font_box162>li{
@@ -492,7 +523,6 @@ main{
 }
 .font_box>li:nth-child(2)>h6{
     font-size: 20px;
-    font-weight: normal;
     width: 100%;
     overflow-wrap: break-word;
     word-break: keep-all;
