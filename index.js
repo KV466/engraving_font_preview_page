@@ -35,7 +35,10 @@ $(function(){
                     $warning.addClass('unsupported');
                 }
             } else {
-                $this.find('h6').text('');
+                var defaultText = $this.hasClass('ko')
+                    ? '다람쥐 헌 쳇바퀴에 타고파'
+                    : 'The quick brown fox jumps over the lazy dog';
+                $this.find('h6').text(defaultText);
                 $warning.removeClass('unsupported');
             }
         });
