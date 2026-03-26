@@ -206,6 +206,7 @@ header{
 @font-face {
     font-family: '155';
     src: url(../font/continuous.woff2) format('woff2');
+    font-display: swap;
 }
 .font_box155>li{
     font-family: '155';
