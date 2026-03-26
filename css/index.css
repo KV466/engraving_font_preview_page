@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background-color: #f5f6f8;
+    background-color: #faf8f5;
 }
 
 #container{
@@ -17,7 +17,7 @@ header{
     text-align: center;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid #e8e0d4;
 }
 header h1{
     color: #222;
@@ -290,7 +290,7 @@ main{
     width: 40%;
     padding: 2rem;
     box-sizing: border-box;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #e8e0d4;
 }
 #Notice>ul>h3{
     font-size: clamp(16px, 1.2vw, 20px);
@@ -447,7 +447,7 @@ main{
     font-size: clamp(12px, 1vw, 15px);
     list-style: none;
     background-color: #fff;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #d4ccc0;
     cursor: pointer;
     border-radius: 16px;
     text-align: center;
@@ -509,6 +509,7 @@ main{
     background-color: rgb(255, 255, 255);
     border-radius: 12px;
     overflow: hidden;
+    border: 1px solid #eae6e0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 .font_box{
@@ -519,12 +520,12 @@ main{
 }
 .font_box>li:nth-child(1){
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: #faf8f5;
     padding: 0.5rem 0;
     display: flex;
     flex-flow: column;
     align-items: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eae6e0;
 }
 .font_box>li:nth-child(1)>h5:nth-child(1){
     font-size: clamp(14px, 1.2vw, 22px);
