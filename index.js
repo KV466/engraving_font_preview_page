@@ -91,6 +91,15 @@ $(function(){
             var $h6 = $box.find('li.intext h6');
             if ($h6.length === 0) return;
 
+            // 기존 pangram-line 스팬이 있으면 원본 텍스트를 <br>로 복원
+            if ($h6.find('.pangram-line').length > 0) {
+                var texts = [];
+                $h6.find('.pangram-line').each(function() {
+                    texts.push($(this).text());
+                });
+                $h6.html(texts.join('<br>'));
+            }
+
             var html = $h6.html();
             if (!html || html.indexOf('<br>') === -1) return;
 
@@ -106,7 +115,6 @@ $(function(){
 
             $h6.find('.pangram-line').each(function() {
                 var $line = $(this);
-                // 임시로 원본 크기 설정
                 $line.css('font-size', baseFontSize + 'px');
                 if ($line[0].scrollWidth > containerWidth) {
                     var newSize = baseFontSize * (containerWidth / $line[0].scrollWidth);
@@ -148,6 +156,8 @@ $(function(){
         $('#FontSize').val(20);
         $('#FontSizeValue').text('20px');
         $('.font_box>li:nth-child(2)>h6').css('font-size', '20px');
+        // pangram-line 인라인 스타일 제거 후 재실행
+        $('.pangram-line').css('font-size', '');
         if ($('#FontPreview').val().length === 0) {
             setTimeout(autoFitPangrams, 50);
         }
@@ -159,7 +169,7 @@ $(function(){
     $('#DarkModeToggle').on('click', function() {
         $('body').toggleClass('dark-mode');
         if ($('body').hasClass('dark-mode')) {
-            $(this).text('밝은 배경');
+            $(this).text('라이트모드');
         } else {
             $(this).text('다크모드');
         }

@@ -25,10 +25,6 @@ header h1{
     font-size: clamp(18px, 1.8vw, 28px);
     letter-spacing: 0.05em;
 }
-header h1 .brand{
-    color: #e67e22;
-    font-weight: 800;
-}
 /*--------------폰트 적용---------------*/
 /*--------한/영/한/일-------*/
 /*101번*/
@@ -382,6 +378,8 @@ main{
     min-width: 36px;
 }
 #FontSizeReset{
+    -webkit-appearance: none;
+    appearance: none;
     padding: 3px 10px;
     border: 1px solid #d4ccc0;
     border-radius: 12px;
@@ -411,6 +409,8 @@ main{
     color: #e53935;
 }
 .tool_darkmode button{
+    -webkit-appearance: none;
+    appearance: none;
     padding: 0.4rem 0.8rem;
     border: 2px solid #888;
     border-radius: 8px;
@@ -512,7 +512,7 @@ main{
     list-style: none;
     background-color: rgb(255, 255, 255);
     border-radius: 12px;
-    overflow: visible;
+    overflow: hidden;
     border: 1px solid #eae6e0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
@@ -544,7 +544,7 @@ main{
     display: flex;
     align-items: center;
     padding: 1rem 0.5rem;
-    overflow: visible;
+    overflow: hidden;
 }
 .font_box>li:nth-child(2)>h6{
     font-size: 20px;
@@ -588,6 +588,8 @@ main{
     background-color: orange;
 }
 .btn-add-engrave{
+    -webkit-appearance: none;
+    appearance: none;
     margin-left: 6px;
     padding: 2px 8px;
     cursor: pointer;
@@ -647,6 +649,8 @@ main{
     color: #e67e22;
 }
 .engrave-panel-header button{
+    -webkit-appearance: none;
+    appearance: none;
     padding: 6px 14px;
     border: 1px solid #d4ccc0;
     border-radius: 8px;
@@ -689,6 +693,8 @@ main{
     color: #e67e22;
 }
 .engrave-item-actions button{
+    -webkit-appearance: none;
+    appearance: none;
     padding: 3px 10px;
     border: 1px solid #d4ccc0;
     border-radius: 6px;
@@ -766,9 +772,6 @@ body.dark-mode header{
 }
 body.dark-mode header h1{
     color: #e0e0e0;
-}
-body.dark-mode header h1 .brand{
-    color: #ffb347;
 }
 body.dark-mode #Notice>ul{
     background-color: #2a2a3e;
