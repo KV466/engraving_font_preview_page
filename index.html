@@ -32,12 +32,29 @@
             <div id="Input_Box">
                 <div class="button">
                     <form action="" onsubmit="" class="textValue">
-                        <input type="text" name="inputtext" id="FontPreview" placeholder="띄어쓰기 포함 영문 15자, 한글 10자 이내로 각인하시려는 문구를 여기에 작성해 보세요." style="font-weight: 600;">
-                        <button type="button">미리보기</button>
+                        <input type="text" name="inputtext" id="FontPreview" placeholder="각인하시려는 문구를 여기에 작성해 보세요. (입력 시 바로 미리보기)" style="font-weight: 600;">
                     </form>
                 </div>
             </div>
-            
+
+        <!--도구 모음-->
+            <div id="Toolbar">
+                <div class="toolbar_inner">
+                    <div class="tool_item tool_search">
+                        <label for="FontSearch">폰트 검색</label>
+                        <input type="text" id="FontSearch" placeholder="번호 또는 이름 검색 (예: 101, 필기체)">
+                    </div>
+                    <div class="tool_item tool_size">
+                        <label for="FontSize">크기</label>
+                        <input type="range" id="FontSize" min="12" max="48" value="20">
+                        <span id="FontSizeValue">20px</span>
+                    </div>
+                    <div class="tool_item tool_darkmode">
+                        <button type="button" id="DarkModeToggle">다크모드</button>
+                    </div>
+                </div>
+            </div>
+
         <!--서체 선택 버튼-->
             <div id="Button_Box">
                 <ul>

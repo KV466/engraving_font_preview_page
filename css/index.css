@@ -272,10 +272,9 @@ header{
 /*---------------각인 안내사항----------*/
 main{
     width: 100%;
-    height: 24rem;
+    padding: 2rem 0;
 }
 #Notice{
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -284,20 +283,21 @@ main{
     background-color: rgb(161, 161, 161);
     border-radius: 40px;
     width: 40%;
-    height: 80%;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 #Notice>ul>h3{
-    font-size: 1vW;
+    font-size: clamp(14px, 1.2vw, 20px);
     font-weight: 600;
     text-align: center;
     margin-bottom: 1rem;
-    padding-top: 2rem;
 }
 #Notice>ul>li{
-    list-style:decimal;
+    list-style: decimal;
     list-style-position: inside;
     line-height: 200%;
     width: 80%;
+    font-size: clamp(12px, 1vw, 16px);
 }
 #Notice>ul>li>span{
     font-weight: 500;
@@ -305,8 +305,8 @@ main{
 
 /*-----------------텍스트 입력-------------------*/
 #Input_Box{
-    height: 4rem;
     width: 100%;
+    padding: 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -317,41 +317,113 @@ main{
 .button>form{
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-.button>form>#FontPreview {
-    width: 80%;
+.button>form>#FontPreview{
+    width: 100%;
     height: 2rem;
     padding: 1rem;
-    font-size: larger;
+    font-size: clamp(14px, 1.2vw, 20px);
     margin: 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
 }
-.button>form>button {
-    width: 10%;
-    height: 70px;
-    font-size: large;
-    margin: 0;
+.button>form>#FontPreview:focus{
+    border-color: orange;
+}
+
+/*-----------------도구 모음-------------------*/
+#Toolbar{
+    width: 100%;
+    padding: 0.5rem 0;
+}
+.toolbar_inner{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.tool_item{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.tool_item label{
+    font-size: clamp(12px, 1vw, 14px);
+    font-weight: 600;
+    white-space: nowrap;
+}
+.tool_search{
+    flex: 1;
+    min-width: 180px;
+}
+.tool_search input{
+    flex: 1;
+    width: 100%;
+    height: 2rem;
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: clamp(12px, 1vw, 14px);
+    outline: none;
+    box-sizing: border-box;
+}
+.tool_search input:focus{
+    border-color: orange;
+}
+.tool_size input[type="range"]{
+    width: 80px;
+    cursor: pointer;
+}
+.tool_size span{
+    font-size: clamp(11px, 0.9vw, 13px);
+    min-width: 36px;
+}
+.tool_darkmode button{
+    padding: 0.4rem 0.8rem;
+    border: 2px solid #888;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    font-size: clamp(11px, 0.9vw, 13px);
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+.tool_darkmode button:hover{
+    background-color: #333;
+    color: #fff;
 }
 
 /*---------------서체 선택 버튼-----------------*/
 #Button_Box{
     width: 100%;
-    height: 16rem;
+    padding: 1rem 0;
 }
 #Button_Box>ul{
     width: 60%;
-    height: 100%;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content:center;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 1rem 1rem;
+    gap: 0.8rem;
+    list-style: none;
+    padding: 0;
 }
 #Button_Box>ul>li{
-    width: 20rem;
-    height: 8rem;
+    flex: 1 1 auto;
+    min-width: 120px;
+    max-width: 200px;
+    padding: 1rem 0.5rem;
     font-weight: 500;
+    font-size: clamp(12px, 1vw, 15px);
     list-style: none;
     background-color: rgb(150, 150, 150);
     cursor: pointer;
@@ -361,37 +433,44 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.2s;
+}
+#Button_Box>ul>li:hover{
+    background-color: rgb(180, 180, 180);
 }
 
 /*----------------------폰트 리스트---------------*/
 #Preview_Box{
     width: 80%;
-    height: 100%;
+    padding-bottom: 2rem;
 }
 #Preview_Box>ul>div{
+    grid-column: 1 / -1;
     width: 100%;
     background-color: orange;
-    height: 10%;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
 }
 #Preview_Box>ul>div>p{
     text-align: center;
+    font-weight: 600;
+    font-size: clamp(13px, 1.1vw, 18px);
 }
-
 #Preview_Box>ul>li{
-    width: 100%;
     margin: 0;
 }
 #Preview_Box>.all_font,
 #Preview_Box>.font4,
 #Preview_Box>.font3,
 #Preview_Box>.font2,
-#Preview_Box>.font1 {
-    height: 60%;
-    display: flex;
+#Preview_Box>.font1{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
     margin: 0 auto;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20% 10px;
+    padding: 0;
+    list-style: none;
 }
 #Preview_Box>.all_font>li,
 #Preview_Box>.font4>li,
@@ -399,12 +478,12 @@ main{
 #Preview_Box>.font2>li,
 #Preview_Box>.font1>li{
     list-style: none;
-    width: 20%;
-    height: 100%;
     background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    overflow: hidden;
 }
 .font_box{
-    height: 100%;
+    min-height: 200px;
     list-style: none;
     display: flex;
     flex-flow: column;
@@ -412,29 +491,100 @@ main{
 .font_box>li:nth-child(1){
     width: 100%;
     background-color: gray;
-    height: 30%;
+    padding: 0.5rem 0;
     display: flex;
     flex-flow: column;
     align-items: center;
 }
 .font_box>li:nth-child(1)>h5:nth-child(1){
-    height: 60%;
+    font-size: clamp(14px, 1.2vw, 22px);
 }
 .font_box>li:nth-child(1)>h5:nth-child(2){
-    height: 40%;
+    font-size: clamp(11px, 0.9vw, 16px);
 }
 .font_box>li:nth-child(2){
-    height: 50%;
+    flex: 1;
     display: flex;
     align-items: center;
+    padding: 0.5rem;
 }
 .font_box>li:nth-child(2)>h6{
-    font-size: larger;
+    font-size: 20px;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: keep-all;
 }
 .font_box>li:nth-child(3){
     color: rgb(183, 13, 13);
     line-height: 140%;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0 6%;
+    padding: 0.5rem;
+    font-size: clamp(11px, 0.9vw, 14px);
+}
+.font_box>li>h5>button{
+    margin-left: 6px;
+    padding: 2px 8px;
+    cursor: pointer;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 12px;
+    transition: background-color 0.2s;
+}
+.font_box>li>h5>button:hover{
+    background-color: orange;
+}
+
+/*-----------------다크모드-------------------*/
+body.dark-mode{
+    background-color: #1a1a2e;
+}
+body.dark-mode header{
+    background-color: #0f0f1a;
+}
+body.dark-mode #Notice>ul{
+    background-color: #2a2a3e;
+    color: #e0e0e0;
+}
+body.dark-mode #Input_Box input,
+body.dark-mode .tool_search input{
+    background-color: #2a2a3e;
+    color: #e0e0e0;
+    border-color: #555;
+}
+body.dark-mode .toolbar_inner label,
+body.dark-mode .tool_size span{
+    color: #e0e0e0;
+}
+body.dark-mode .tool_darkmode button{
+    background-color: #2a2a3e;
+    color: #e0e0e0;
+    border-color: #555;
+}
+body.dark-mode #Button_Box>ul>li{
+    background-color: #3a3a4e;
+    color: #e0e0e0;
+}
+body.dark-mode #Preview_Box>ul>div{
+    background-color: #cc8800;
+}
+body.dark-mode #Preview_Box>ul>li{
+    background-color: #2a2a3e;
+}
+body.dark-mode .font_box>li:nth-child(1){
+    background-color: #3a3a4e;
+    color: #e0e0e0;
+}
+body.dark-mode .font_box>li:nth-child(2){
+    background-color: #1e1e2e;
+    color: #e0e0e0;
+}
+body.dark-mode .font_box>li:nth-child(3){
+    color: #ff6b6b;
+}
+body.dark-mode .font_box>li>h5>button{
+    background-color: #444;
+    color: #e0e0e0;
+    border-color: #666;
 }
