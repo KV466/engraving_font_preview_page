@@ -145,8 +145,28 @@ $(function(){
     });
 
     // === 다중 각인 미리보기 ===
+    var STORAGE_KEY = 'engraveList';
     var engraveList = [];
     var engraveIdCounter = 0;
+
+    // localStorage 저장/복원
+    function saveEngrave() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ list: engraveList, counter: engraveIdCounter }));
+    }
+    function loadEngrave() {
+        try {
+            var data = JSON.parse(localStorage.getItem(STORAGE_KEY));
+            if (data && data.list) {
+                engraveList = data.list;
+                engraveIdCounter = data.counter || 0;
+            }
+        } catch(e) {}
+    }
+    loadEngrave();
+    if (engraveList.length > 0) {
+        renderEngravePanel();
+        $('#EngraveFAB').show();
+    }
 
     // 폰트 번호 추출 헬퍼
     function getFontNum($fontBox) {
@@ -168,6 +188,7 @@ $(function(){
         var text = $('#FontPreview').val();
         engraveIdCounter++;
         engraveList.push({ id: engraveIdCounter, fontNum: fontNum, text: text });
+        saveEngrave();
         renderEngravePanel();
         $('#EngraveFAB').show();
     });
@@ -192,6 +213,7 @@ $(function(){
                 '<div class="engrave-item-header">' +
                     '<span class="engrave-font-num">' + item.fontNum + '번</span>' +
                     '<div class="engrave-item-actions">' +
+                        '<button class="engrave-add-same">추가</button>' +
                         '<button class="engrave-copy-one">복사</button>' +
                         '<button class="engrave-delete">삭제</button>' +
                     '</div>' +
@@ -230,6 +252,7 @@ $(function(){
                 break;
             }
         }
+        saveEngrave();
         $row.find('.engrave-preview').text(text);
     });
 
@@ -245,11 +268,27 @@ $(function(){
         }
     });
 
+    // 같은 서체 추가
+    $(document).on('click', '.engrave-add-same', function() {
+        var $row = $(this).closest('.engrave-item');
+        var id = parseInt($row.data('id'));
+        var fontNum = '';
+        for (var i = 0; i < engraveList.length; i++) {
+            if (engraveList[i].id === id) { fontNum = engraveList[i].fontNum; break; }
+        }
+        if (!fontNum) return;
+        engraveIdCounter++;
+        engraveList.push({ id: engraveIdCounter, fontNum: fontNum, text: '' });
+        saveEngrave();
+        renderEngravePanel();
+    });
+
     // 각인 삭제
     $(document).on('click', '.engrave-delete', function() {
         var $row = $(this).closest('.engrave-item');
         var id = parseInt($row.data('id'));
         engraveList = engraveList.filter(function(item) { return item.id !== id; });
+        saveEngrave();
         renderEngravePanel();
     });
 
