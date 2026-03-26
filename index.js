@@ -64,77 +64,12 @@ $(function(){
             } else {
                 var parts = [];
                 if ($this.hasClass('ko')) parts.push('다람쥐 헌 쳇바퀴에 타고파');
-                if ($this.hasClass('en')) parts.push(
-                    $this.hasClass('ko') ? 'The quick brown fox' : 'Sphinx of black quartz, judge my vow'
-                );
+                if ($this.hasClass('en')) parts.push('Sphinx of black quartz, judge my vow');
                 if ($this.hasClass('han')) parts.push('花鳥風月');
                 if ($this.hasClass('jp')) parts.push('いろはにほへと');
                 $this.find('h6').html(parts.join('<br>'));
                 $warning.removeClass('unsupported');
             }
-        });
-        // 팬그램 자동축소: 사용자 입력 시 미적용
-        if (!isUserInput) {
-            autoFitPangrams();
-        } else {
-            // 사용자 입력 시 축소 해제
-            $('.pangram-line').each(function() {
-                $(this).css('font-size', '');
-            });
-        }
-    }
-
-    // === 팬그램 자동축소 ===
-    function autoFitPangrams() {
-        $('.font_box').each(function() {
-            var $box = $(this);
-            var $h6 = $box.find('li.intext h6');
-            if ($h6.length === 0) return;
-
-            // 기존 pangram-line 스팬이 있으면 원본 텍스트를 <br>로 복원
-            if ($h6.find('.pangram-line').length > 0) {
-                var texts = [];
-                $h6.find('.pangram-line').each(function() {
-                    texts.push($(this).text());
-                });
-                $h6.html(texts.join('<br>'));
-            }
-
-            var html = $h6.html();
-            if (!html) return;
-
-            // <br>이 있으면 멀티라인, 없으면 단일라인 — 둘 다 처리
-            var lines;
-            if (html.indexOf('<br>') !== -1) {
-                lines = html.split('<br>');
-            } else {
-                lines = [html];
-            }
-            var wrapped = lines.map(function(line) {
-                return '<span class="pangram-line">' + line + '</span>';
-            }).join('');
-            $h6.html(wrapped);
-
-            var containerWidth = $h6.width();
-            var baseFontSize = parseFloat($h6.css('font-size'));
-
-            $h6.find('.pangram-line').each(function() {
-                var $line = $(this);
-                $line.css('font-size', baseFontSize + 'px');
-
-                // canvas.measureText()로 텍스트 폭 계산 (DOM 측정 부정확 회피)
-                var fontFamily = $h6.css('font-family');
-                var canvas = autoFitPangrams._canvas || (autoFitPangrams._canvas = document.createElement('canvas'));
-                var ctx = canvas.getContext('2d');
-                ctx.font = baseFontSize + 'px ' + fontFamily;
-                var textWidth = ctx.measureText($line.text()).width;
-
-                if (textWidth > containerWidth) {
-                    var newSize = baseFontSize * (containerWidth / textWidth);
-                    if (newSize < 10) newSize = 10;
-                    $line.css('font-size', newSize + 'px');
-                }
-            });
         });
     }
 
@@ -159,9 +94,6 @@ $(function(){
         var size = $(this).val();
         $('#FontSizeValue').text(size + 'px');
         $('.font_box>li:nth-child(2)>h6').css('font-size', size + 'px');
-        if ($('#FontPreview').val().length === 0) {
-            setTimeout(autoFitPangrams, 50);
-        }
     });
 
     // 폰트 크기 초기화
@@ -169,11 +101,10 @@ $(function(){
         $('#FontSize').val(20);
         $('#FontSizeValue').text('20px');
         $('.font_box>li:nth-child(2)>h6').css('font-size', '20px');
-        // pangram-line 인라인 스타일 제거 후 재실행
-        $('.pangram-line').css('font-size', '');
-        if ($('#FontPreview').val().length === 0) {
-            setTimeout(autoFitPangrams, 50);
-        }
+        // 입력 텍스트 초기화 + 팬그램 복원
+        $('#FontPreview').val('');
+        updateCharCount('');
+        updatePreview();
     }
     $('#FontSizeReset').on('click', resetFontSize);
     $('#FontSizeValue').on('click', resetFontSize);
@@ -197,10 +128,6 @@ $(function(){
 
         $('#Preview_Box>ul').hide();
         $('#Preview_Box>ul').eq(index).show();
-
-        if ($('#FontPreview').val().length === 0) {
-            setTimeout(autoFitPangrams, 100);
-        }
     });
 
     // === 서체 번호 복사 버튼 ===
@@ -353,31 +280,15 @@ $(function(){
         $('#EngravePanel').slideUp(200);
     });
 
-    // === 팬그램 자동축소: 초기 로드 + 리사이즈 ===
-    var resizeTimer = null;
-    $(window).on('resize', function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
-            if ($('#FontPreview').val().length === 0) {
-                autoFitPangrams();
-            }
-        }, 300);
+    // === 언어 컬러 뱃지 생성 ===
+    $('.font_box').each(function() {
+        var $box = $(this);
+        var $langLabel = $box.find('> li:first-child > h5:nth-child(2)');
+        var badges = [];
+        if ($box.hasClass('ko')) badges.push('<span class="lang-badge lang-ko">한글</span>');
+        if ($box.hasClass('en')) badges.push('<span class="lang-badge lang-en">영어</span>');
+        if ($box.hasClass('han')) badges.push('<span class="lang-badge lang-han">한문</span>');
+        if ($box.hasClass('jp')) badges.push('<span class="lang-badge lang-jp">일본어</span>');
+        $langLabel.html(badges.join(''));
     });
-
-    // 초기 로드 시 팬그램 자동축소
-    if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(function() {
-            autoFitPangrams();
-            setTimeout(autoFitPangrams, 1000);
-        });
-        // 폰트 로드 완료 시마다 재실행
-        document.fonts.addEventListener('loadingdone', function() {
-            if ($('#FontPreview').val().length === 0) {
-                autoFitPangrams();
-            }
-        });
-    } else {
-        setTimeout(autoFitPangrams, 500);
-        setTimeout(autoFitPangrams, 1500);
-    }
 });

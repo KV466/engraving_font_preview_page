@@ -22,7 +22,7 @@ header{
 }
 header h1{
     color: #222;
-    font-size: clamp(18px, 1.8vw, 28px);
+    font-size: clamp(22px, 2.2vw, 32px);
     letter-spacing: 0.05em;
 }
 /*--------------폰트 적용---------------*/
@@ -295,7 +295,7 @@ main{
     border: 1px solid #e8e0d4;
 }
 #Notice>ul>h3{
-    font-size: clamp(16px, 1.2vw, 20px);
+    font-size: clamp(20px, 1.5vw, 24px);
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
@@ -305,7 +305,7 @@ main{
     list-style-position: inside;
     line-height: 220%;
     width: 80%;
-    font-size: clamp(14px, 1vw, 16px);
+    font-size: clamp(16px, 1.2vw, 18px);
     margin-bottom: 0.3rem;
 }
 #Notice>ul>li>span{
@@ -333,7 +333,7 @@ main{
     width: 100%;
     height: 2rem;
     padding: 1rem;
-    font-size: clamp(14px, 1.2vw, 20px);
+    font-size: clamp(16px, 1.4vw, 22px);
     margin: 0;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -365,7 +365,7 @@ main{
     gap: 0.5rem;
 }
 .tool_item label{
-    font-size: clamp(12px, 1vw, 14px);
+    font-size: clamp(14px, 1.1vw, 16px);
     font-weight: 600;
     white-space: nowrap;
 }
@@ -380,7 +380,7 @@ main{
     cursor: pointer;
 }
 .tool_size span{
-    font-size: clamp(11px, 0.9vw, 13px);
+    font-size: clamp(13px, 1vw, 15px);
     min-width: 36px;
 }
 #FontSizeReset{
@@ -392,7 +392,7 @@ main{
     background: #f5f0eb;
     color: #666;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1;
     transition: background-color 0.2s, color 0.2s;
@@ -405,7 +405,7 @@ main{
     cursor: pointer;
 }
 #CharCount{
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     color: #999;
     white-space: nowrap;
@@ -422,7 +422,7 @@ main{
     border-radius: 8px;
     background: #fff;
     cursor: pointer;
-    font-size: clamp(11px, 0.9vw, 13px);
+    font-size: clamp(14px, 1.1vw, 16px);
     font-weight: 600;
     transition: background-color 0.2s, color 0.2s;
     white-space: nowrap;
@@ -454,7 +454,7 @@ main{
     max-width: 200px;
     padding: 1rem 0.5rem;
     font-weight: 500;
-    font-size: clamp(12px, 1vw, 15px);
+    font-size: clamp(14px, 1.2vw, 17px);
     list-style: none;
     background-color: #fff;
     border: 2px solid #d4ccc0;
@@ -492,7 +492,7 @@ main{
 #Preview_Box>ul>div>p{
     text-align: center;
     font-weight: 600;
-    font-size: clamp(13px, 1.1vw, 18px);
+    font-size: clamp(16px, 1.3vw, 20px);
     color: #fff;
 }
 #Preview_Box>ul>li{
@@ -532,18 +532,25 @@ main{
 .font_box>li:nth-child(1){
     width: 100%;
     background-color: #faf8f5;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.8rem;
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
+    gap: 0.3rem;
     border-bottom: 1px solid #eae6e0;
     font-family: inherit;
 }
 .font_box>li:nth-child(1)>h5:nth-child(1){
-    font-size: clamp(14px, 1.2vw, 22px);
+    font-size: clamp(18px, 1.5vw, 24px);
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 .font_box>li:nth-child(1)>h5:nth-child(2){
-    font-size: clamp(11px, 0.9vw, 16px);
+    width: 100%;
+    text-align: center;
+    font-size: clamp(14px, 1.1vw, 18px);
 }
 .font_box>li:nth-child(2){
     flex: 1;
@@ -565,7 +572,7 @@ main{
     text-align: center;
     font-family: inherit;
     padding: 0.5rem;
-    font-size: clamp(11px, 0.9vw, 14px);
+    font-size: clamp(13px, 1vw, 16px);
     font-weight: 600;
 }
 .font_box>li:nth-child(3).unsupported{
@@ -587,7 +594,7 @@ main{
     border: 1px solid #888;
     border-radius: 4px;
     background: #fff;
-    font-size: 12px;
+    font-size: 13px;
     transition: background-color 0.2s;
 }
 .font_box>li>h5>button:hover{
@@ -603,7 +610,7 @@ main{
     border-radius: 4px;
     background: #fff;
     color: #e67e22;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     transition: background-color 0.2s, color 0.2s;
 }
@@ -612,13 +619,20 @@ main{
     color: #fff;
 }
 
-/*-----------------팬그램 자동축소-------------------*/
-.pangram-line{
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+/*-----------------언어 뱃지-------------------*/
+.lang-badge{
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 2px;
+    color: #fff;
 }
+.lang-ko{ background-color: #e67e22; }
+.lang-en{ background-color: #3498db; }
+.lang-han{ background-color: #27ae60; }
+.lang-jp{ background-color: #8e44ad; }
 
 /*-----------------각인 패널-------------------*/
 #EngravePanel{
