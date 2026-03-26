@@ -492,6 +492,7 @@ main{
 }
 .font_box>li:nth-child(2)>h6{
     font-size: 20px;
+    font-weight: normal;
     width: 100%;
     overflow-wrap: break-word;
     word-break: keep-all;
