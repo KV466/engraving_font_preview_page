@@ -25,6 +25,9 @@
 
 /*태블릿 이하*/
 @media (max-width: 1024px) {
+    #EngravePanel{
+        width: 92%;
+    }
     /*제목*/
     header{
         padding: 3%;
@@ -65,6 +68,12 @@
 
 /*태블릿 세로기준*/
 @media (max-width: 768px) {
+    #EngravePanel{
+        width: 95%;
+    }
+    .engrave-item-body{
+        flex-wrap: wrap;
+    }
     /*제목*/
     header{
         font-size: clamp(12px, 2vw, 16px);
@@ -116,6 +125,15 @@
 
 /*모바일*/
 @media (max-width: 480px) {
+    #EngravePanel{
+        width: 98%;
+    }
+    #EngraveFAB{
+        padding: 10px 16px;
+        font-size: 13px;
+        right: 16px;
+        bottom: 16px;
+    }
     /*각인 안내사항*/
     #Notice>ul{
         width: 92%;
@@ -136,10 +154,6 @@
         width: 95%;
         gap: 0.5rem;
     }
-    .tool_search{
-        min-width: 100%;
-    }
-
     /*서체 선택 버튼*/
     #Button_Box>ul{
         width: 95%;

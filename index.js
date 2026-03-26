@@ -1,5 +1,5 @@
 $(function(){
-    // 폰트 지원 여부 검사 함수 (중복 제거)
+    // 폰트 지원 여부 검사 함수
     function checkFontSupport($fontBox, text) {
         let canShow = true;
         [...text].forEach(function(char) {
@@ -19,13 +19,40 @@ $(function(){
         return canShow;
     }
 
+    // === 글자 수 제한 ===
+    function getCharLimit(text) {
+        return /[\uAC00-\uD7A3\u3131-\u318E\u4E00-\u9FFF\u3040-\u309F\u30A0-\u30FF]/.test(text) ? 10 : 15;
+    }
+
+    function updateCharCount(text) {
+        var limit = getCharLimit(text);
+        var len = text.length;
+        var $counter = $('#CharCount');
+        $counter.text(len + '/' + limit);
+        if (limit - len <= 2 && len > 0) {
+            $counter.addClass('warning');
+        } else {
+            $counter.removeClass('warning');
+        }
+    }
+
+    function enforceCharLimit($input) {
+        var text = $input.val();
+        var limit = getCharLimit(text);
+        if (text.length > limit) {
+            $input.val(text.substring(0, limit));
+        }
+        updateCharCount($input.val());
+    }
+
     // 미리보기 텍스트 업데이트 함수
     function updatePreview() {
         var TextV = $('#FontPreview').val();
+        var isUserInput = TextV.length > 0;
         $('.font_box').each(function() {
             var $this = $(this);
             var $warning = $this.children('li').eq(2);
-            if (TextV.length > 0) {
+            if (isUserInput) {
                 var supported = checkFontSupport($this, TextV);
                 if (supported) {
                     $this.find('h6').text(TextV);
@@ -46,16 +73,59 @@ $(function(){
                 $warning.removeClass('unsupported');
             }
         });
+        // 팬그램 자동축소: 사용자 입력 시 미적용
+        if (!isUserInput) {
+            autoFitPangrams();
+        } else {
+            // 사용자 입력 시 축소 해제
+            $('.pangram-line').each(function() {
+                $(this).css('font-size', '');
+            });
+        }
+    }
+
+    // === 팬그램 자동축소 ===
+    function autoFitPangrams() {
+        $('.font_box').each(function() {
+            var $box = $(this);
+            var $h6 = $box.find('li.intext h6');
+            if ($h6.length === 0) return;
+
+            var html = $h6.html();
+            if (!html || html.indexOf('<br>') === -1) return;
+
+            // <br>로 분리된 텍스트를 pangram-line span으로 래핑
+            var lines = html.split('<br>');
+            var wrapped = lines.map(function(line) {
+                return '<span class="pangram-line">' + line + '</span>';
+            }).join('');
+            $h6.html(wrapped);
+
+            var containerWidth = $h6.width();
+            var baseFontSize = parseFloat($h6.css('font-size'));
+
+            $h6.find('.pangram-line').each(function() {
+                var $line = $(this);
+                // 임시로 원본 크기 설정
+                $line.css('font-size', baseFontSize + 'px');
+                if ($line[0].scrollWidth > containerWidth) {
+                    var newSize = baseFontSize * (containerWidth / $line[0].scrollWidth);
+                    if (newSize < 10) newSize = 10;
+                    $line.css('font-size', newSize + 'px');
+                }
+            });
+        });
     }
 
     // === 1. 입력 즉시 미리보기 (debounce) ===
     var debounceTimer = null;
     $('#FontPreview').on('input', function() {
+        enforceCharLimit($(this));
         clearTimeout(debounceTimer);
         debounceTimer = setTimeout(updatePreview, 200);
     });
 
-    // 엔터로도 미리보기 (기존 기능 유지)
+    // 엔터로도 미리보기
     $('form').on('submit', function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -63,101 +133,29 @@ $(function(){
         return false;
     });
 
-    // === 2. 폰트 이름/번호 검색 ===
-    // 폰트 이름 매핑 (검색용)
-    var fontNames = {
-        '101': '조선글씨체 ChosunGs',
-        '102': '맑은고딕 malgun',
-        '110': '안성탕면 Ansungtangmyun Bold',
-        '111': '추사사랑 ChusaLove',
-        '112': '피렌체 EF Firenze',
-        '120': '학교안심마법사 HakgyoansimMabeopsaR',
-        '121': '가비아납작블록 gabia napjakBlock',
-        '122': '배찌 Bazzi',
-        '123': '일기체 EF Diary',
-        '124': '87밀상 MMILSANG Oblique',
-        '125': '안창호 KCC Ahnchangho',
-        '126': '쿨재즈 Cooljazz',
-        '127': '솔뫼김대건',
-        '128': '가비아청연 GabiaCheongyeon',
-        '129': '전남교육유나체',
-        '130': '나눔손글씨고딕아니고고딩',
-        '131': '온글잎위씨리스트',
-        '132': '나눔손글씨나무정원',
-        '151': '영주선비 YEONGJUSeonbi',
-        '152': '브래들리핸드 BradleyHand',
-        '153': '모노타입코르시바 MonotypeCorsivaRegular',
-        '154': '미스트랄 MISTRAL',
-        '155': '컨티뉴어스 Continuous',
-        '156': '블랙소드 Blacksword',
-        '157': '댄싱스크립트 DancingScript',
-        '158': '파리지엔느 Parisienne',
-        '159': '알렉스브러쉬 AlexBrush',
-        '160': '그레이트바이브스 GreatVibes',
-        '161': '에드워디안스크립트 EdwardianScript',
-        '162': '잉크버로우 inkburrow'
-    };
-
-    var searchDebounce = null;
-    $('#FontSearch').on('input', function() {
-        clearTimeout(searchDebounce);
-        searchDebounce = setTimeout(function() {
-            var query = $('#FontSearch').val().trim().toLowerCase();
-
-            // 현재 보이는 탭의 li들만 대상
-            $('#Preview_Box>ul').each(function() {
-                var $ul = $(this);
-                if ($ul.css('display') === 'none') return;
-
-                $ul.children('li').each(function() {
-                    var $li = $(this);
-                    var $fontBox = $li.find('.font_box');
-                    if ($fontBox.length === 0) return;
-
-                    if (query === '') {
-                        $li.show();
-                        return;
-                    }
-
-                    // 폰트 번호 추출
-                    var fontNum = '';
-                    var classList = $fontBox.attr('class').split(/\s+/);
-                    for (var i = 0; i < classList.length; i++) {
-                        var match = classList[i].match(/^font_box(\d+)$/);
-                        if (match) {
-                            fontNum = match[1];
-                            break;
-                        }
-                    }
-
-                    // 번호 매칭 또는 이름 매칭
-                    var nameStr = (fontNames[fontNum] || '').toLowerCase();
-                    var h5Text = $fontBox.find('h5').text().toLowerCase();
-                    if (fontNum.indexOf(query) !== -1 || nameStr.indexOf(query) !== -1 || h5Text.indexOf(query) !== -1) {
-                        $li.show();
-                    } else {
-                        $li.hide();
-                    }
-                });
-            });
-        }, 200);
-    });
-
-    // === 3. 폰트 크기 조절 슬라이더 ===
+    // === 2. 폰트 크기 조절 슬라이더 ===
     $('#FontSize').on('input', function() {
         var size = $(this).val();
         $('#FontSizeValue').text(size + 'px');
         $('.font_box>li:nth-child(2)>h6').css('font-size', size + 'px');
+        if ($('#FontPreview').val().length === 0) {
+            setTimeout(autoFitPangrams, 50);
+        }
     });
 
     // 폰트 크기 초기화
-    $('#FontSizeReset').on('click', function() {
+    function resetFontSize() {
         $('#FontSize').val(20);
         $('#FontSizeValue').text('20px');
         $('.font_box>li:nth-child(2)>h6').css('font-size', '20px');
-    });
+        if ($('#FontPreview').val().length === 0) {
+            setTimeout(autoFitPangrams, 50);
+        }
+    }
+    $('#FontSizeReset').on('click', resetFontSize);
+    $('#FontSizeValue').on('click', resetFontSize);
 
-    // === 4. 다크모드 토글 ===
+    // === 3. 다크모드 토글 ===
     $('#DarkModeToggle').on('click', function() {
         $('body').toggleClass('dark-mode');
         if ($('body').hasClass('dark-mode')) {
@@ -167,7 +165,7 @@ $(function(){
         }
     });
 
-    // === 기존 기능: 서체 분류 버튼 ===
+    // === 서체 분류 버튼 ===
     $('#Button_Box>ul>li').click(function() {
         var index = $(this).index();
 
@@ -177,14 +175,12 @@ $(function(){
         $('#Preview_Box>ul').hide();
         $('#Preview_Box>ul').eq(index).show();
 
-        // 검색 필터 초기화
-        $('#FontSearch').val('');
-        $('#Preview_Box>ul').each(function() {
-            $(this).children('li').show();
-        });
+        if ($('#FontPreview').val().length === 0) {
+            setTimeout(autoFitPangrams, 100);
+        }
     });
 
-    // === 기존 기능: 서체 번호 복사 버튼 ===
+    // === 서체 번호 복사 버튼 ===
     $('.font_box>li>h5>button').click(function(e) {
         e.stopPropagation();
         var H6num = $(this).closest('.font_box>li>h5')
@@ -201,4 +197,156 @@ $(function(){
             alert('"' + H6num + ') ' + UserText + '"' + ' 복사되었습니다. 배송메세지에 첨부해 주세요.');
         });
     });
+
+    // === 담기 버튼 동적 삽입 ===
+    $('.font_box>li:first-child>h5:first-child').each(function() {
+        var $h5 = $(this);
+        var $addBtn = $('<button class="btn-add-engrave">담기</button>');
+        $h5.append($addBtn);
+    });
+
+    // === 다중 각인 미리보기 ===
+    var engraveList = [];
+    var engraveIdCounter = 0;
+
+    // 폰트 번호 추출 헬퍼
+    function getFontNum($fontBox) {
+        var classList = $fontBox.attr('class').split(/\s+/);
+        for (var i = 0; i < classList.length; i++) {
+            var match = classList[i].match(/^font_box(\d+)$/);
+            if (match) return match[1];
+        }
+        return '';
+    }
+
+    // 담기 버튼 클릭
+    $(document).on('click', '.btn-add-engrave', function(e) {
+        e.stopPropagation();
+        var $fontBox = $(this).closest('.font_box');
+        var fontNum = getFontNum($fontBox);
+        if (!fontNum) return;
+
+        var text = $('#FontPreview').val();
+        engraveIdCounter++;
+        engraveList.push({ id: engraveIdCounter, fontNum: fontNum, text: text });
+        renderEngravePanel();
+        $('#EngraveFAB').show();
+    });
+
+    function renderEngravePanel() {
+        var $list = $('#EngraveList');
+        $list.empty();
+        $('#EngraveCount').text(engraveList.length);
+        $('#EngraveFABCount').text(engraveList.length);
+
+        if (engraveList.length === 0) {
+            $list.html('<p class="engrave-empty">카드의 \'담기\' 버튼으로 각인을 추가해 주세요.</p>');
+            $('#EngraveFAB').hide();
+            return;
+        }
+
+        engraveList.forEach(function(item) {
+            var limit = getCharLimit(item.text);
+            var len = item.text.length;
+            var warningClass = (limit - len <= 2 && len > 0) ? ' warning' : '';
+            var $row = $('<div class="engrave-item" data-id="' + item.id + '">' +
+                '<div class="engrave-item-header">' +
+                    '<span class="engrave-font-num">' + item.fontNum + '번</span>' +
+                    '<div class="engrave-item-actions">' +
+                        '<button class="engrave-copy-one">복사</button>' +
+                        '<button class="engrave-delete">삭제</button>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="engrave-item-body">' +
+                    '<input type="text" class="engrave-text-input" value="' + $('<span>').text(item.text).html() + '" placeholder="각인 문구 입력">' +
+                    '<span class="engrave-char-count' + warningClass + '">' + len + '/' + limit + '</span>' +
+                '</div>' +
+                '<div class="engrave-preview" style="font-family:\'' + item.fontNum + '\'">' + $('<span>').text(item.text).html() + '</div>' +
+            '</div>');
+            $list.append($row);
+        });
+    }
+
+    // 각인 개별 텍스트 입력
+    $(document).on('input', '.engrave-text-input', function() {
+        var $row = $(this).closest('.engrave-item');
+        var id = parseInt($row.data('id'));
+        var text = $(this).val();
+        var limit = getCharLimit(text);
+        if (text.length > limit) {
+            text = text.substring(0, limit);
+            $(this).val(text);
+        }
+        var len = text.length;
+        var $counter = $row.find('.engrave-char-count');
+        $counter.text(len + '/' + limit);
+        if (limit - len <= 2 && len > 0) {
+            $counter.addClass('warning');
+        } else {
+            $counter.removeClass('warning');
+        }
+        for (var i = 0; i < engraveList.length; i++) {
+            if (engraveList[i].id === id) {
+                engraveList[i].text = text;
+                break;
+            }
+        }
+        $row.find('.engrave-preview').text(text);
+    });
+
+    // 각인 개별 복사
+    $(document).on('click', '.engrave-copy-one', function() {
+        var $row = $(this).closest('.engrave-item');
+        var id = parseInt($row.data('id'));
+        for (var i = 0; i < engraveList.length; i++) {
+            if (engraveList[i].id === id) {
+                navigator.clipboard.writeText(engraveList[i].fontNum + ') ' + engraveList[i].text);
+                break;
+            }
+        }
+    });
+
+    // 각인 삭제
+    $(document).on('click', '.engrave-delete', function() {
+        var $row = $(this).closest('.engrave-item');
+        var id = parseInt($row.data('id'));
+        engraveList = engraveList.filter(function(item) { return item.id !== id; });
+        renderEngravePanel();
+    });
+
+    // 전체 복사
+    $('#EngraveCopyAll').on('click', function() {
+        var lines = engraveList.map(function(item) {
+            return item.fontNum + ') ' + item.text;
+        });
+        navigator.clipboard.writeText(lines.join('\n'));
+    });
+
+    // FAB 토글
+    $('#EngraveFAB').on('click', function() {
+        $('#EngravePanel').slideToggle(200);
+    });
+    $('#EngravePanelClose').on('click', function() {
+        $('#EngravePanel').slideUp(200);
+    });
+
+    // === 팬그램 자동축소: 초기 로드 + 리사이즈 ===
+    var resizeTimer = null;
+    $(window).on('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            if ($('#FontPreview').val().length === 0) {
+                autoFitPangrams();
+            }
+        }, 300);
+    });
+
+    // 초기 로드 시 팬그램 자동축소
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function() {
+            autoFitPangrams();
+        });
+    } else {
+        setTimeout(autoFitPangrams, 500);
+    }
 });

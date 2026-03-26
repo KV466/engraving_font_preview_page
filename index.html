@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이리듐 각인 폰트 미리보기</title>
+    <link rel="stylesheet" as="style" crossorigin
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" href="css/index.css">
@@ -12,7 +14,7 @@
 <body>
     <div id="container">
         <header>
-            <h1>이리듐 각인 서체 미리보기</h1>
+            <h1><span class="brand">이리듐</span> 각인 서체 미리보기</h1>
         </header>
         <!--각인 안내사항-->
         <main>
@@ -33,6 +35,7 @@
                 <div class="button">
                     <form action="" onsubmit="" class="textValue">
                         <input type="text" name="inputtext" id="FontPreview" placeholder="각인하시려는 문구를 여기에 작성해 보세요. (입력 시 바로 미리보기)" style="font-weight: 600;">
+                        <span id="CharCount">0/15</span>
                     </form>
                 </div>
             </div>
@@ -40,15 +43,11 @@
         <!--도구 모음-->
             <div id="Toolbar">
                 <div class="toolbar_inner">
-                    <div class="tool_item tool_search">
-                        <label for="FontSearch">폰트 검색</label>
-                        <input type="text" id="FontSearch" placeholder="번호 또는 이름 검색 (예: 101, 필기체)">
-                    </div>
                     <div class="tool_item tool_size">
                         <label for="FontSize">크기</label>
                         <input type="range" id="FontSize" min="12" max="48" value="20">
                         <span id="FontSizeValue">20px</span>
-                        <button type="button" id="FontSizeReset" title="크기 초기화">↺</button>
+                        <button type="button" id="FontSizeReset">기본</button>
                     </div>
                     <div class="tool_item tool_darkmode">
                         <button type="button" id="DarkModeToggle">다크모드</button>
@@ -820,5 +819,18 @@
             </div>
         </main>
     </div>
+    <div id="EngravePanel" style="display:none;">
+        <div class="engrave-panel-header">
+            <h3>내 각인 목록 <span id="EngraveCount">0</span>건</h3>
+            <div>
+                <button id="EngraveCopyAll">전체 복사</button>
+                <button id="EngravePanelClose">닫기</button>
+            </div>
+        </div>
+        <div id="EngraveList">
+            <p class="engrave-empty">카드의 '담기' 버튼으로 각인을 추가해 주세요.</p>
+        </div>
+    </div>
+    <button id="EngraveFAB" style="display:none;">내 각인 <span id="EngraveFABCount">0</span></button>
 </body>
 </html>
