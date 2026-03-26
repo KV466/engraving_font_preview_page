@@ -99,7 +99,7 @@ header h1{
 /*123번*/
 @font-face {
     font-family: '123';
-    src: url(../font/EF_Diary.woff2) format('woff2');
+    src: url(../font/EF_Diary.ttf) format('truetype');
 }
 .font_box123>li{
     font-family: '123';
