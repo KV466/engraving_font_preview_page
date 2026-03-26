@@ -3,57 +3,30 @@
 /*1600px 이하*/
 @media (max-width: 1600px) {
     /*각인 안내사항*/
-    main{
-    height: 30rem;
-    }
     #Notice>ul{
-    width: 68%;
-    height: 84%;
+        width: 60%;
     }
     #Notice>ul>h3{
-    font-size: 2vw;
+        font-size: clamp(14px, 2vw, 22px);
     }
     #Notice>ul>li{
-        font-size: 1.4vw;
+        font-size: clamp(11px, 1.4vw, 16px);
     }
 
     /*텍스트 입력*/
     #Input_Box{
-    height: 6rem;
+        height: 6rem;
     }
     #Input_Box>.button{
         width: 60%;
     }
-    .button>#FontPreview{
-    height: 4rem;
-    font-size: 1.2vW;
-    }
 
     /*폰트 리스트*/
-    #Preview_Box>.all_font,
-    #Preview_Box>.font4,
-    #Preview_Box>.font3,
-    #Preview_Box>.font2,
-    #Preview_Box>.font1{
-    width: 90%;
-    gap: 6% 4%;
-    }
-    #Preview_Box>.all_font>li,
-    #Preview_Box>.font4>li,
-    #Preview_Box>.font3>li,
-    #Preview_Box>.font2>li,
-    #Preview_Box>.font1>li{
-    height: 87%;
-    }
-    .font_box>li:nth-child(1)>h5:nth-child(1){
-    font-size: 30px;
-    }
-    .font_box>li:nth-child(3)>h6{
-    font-size: 30px;
-    line-height: 120%;
+    #Preview_Box{
+        width: 92%;
     }
     .font_box>li>h5>button{
-    margin-left: 8px;
+        margin-left: 8px;
     }
 }
 
@@ -61,67 +34,44 @@
 @media (max-width: 1024px) {
     /*제목*/
     header{
-    padding: 3%;
+        padding: 3%;
     }
 
     /*각인 안내사항*/
     #Notice>ul{
-    width: 74%;
+        width: 74%;
     }
 
     /*텍스트 입력*/
-    #Input_Box{
-    height: 20%;
-    }    
     #Input_Box>.button{
-    width: 70%;
+        width: 70%;
     }
     input::placeholder{
-    font-size: 1.4vW;
+        font-size: clamp(11px, 1.4vw, 16px);
     }
-    
+
     /*서체 선택 버튼*/
-    #Button_Box{
-    height: 8rem;
-    }
     #Button_Box>ul{
-    width: 80%;
-    gap: 0.6rem;
+        width: 90%;
     }
     #Button_Box>ul>li{
-    height: 6rem;
-    padding: 0;
-    font-size: 1.4vw;
-    font-weight: 600;
+        font-size: clamp(11px, 1.4vw, 14px);
+        font-weight: 600;
     }
 
     /*폰트 리스트*/
+    #Preview_Box{
+        width: 94%;
+    }
     #Preview_Box>.all_font,
     #Preview_Box>.font4,
     #Preview_Box>.font3,
     #Preview_Box>.font2,
     #Preview_Box>.font1{
-    width: 86%;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
-    #Preview_Box>.all_font>li,
-    #Preview_Box>.font4>li,
-    #Preview_Box>.font3>li,
-    #Preview_Box>.font2>li,
-    #Preview_Box>.font1>li{
-    width: 30%;
-    height: 100%;
-    overflow-wrap: break-word;
-    }
-    .font_box>li>h5{
-    font-size: 1.6vW;
-    padding: 0.4rem 0;
-    }
-    .font_box>li>p{
-    padding: 0 1rem;
-    margin-bottom: 0.2rem;
-    }
-    .font_box>li:nth-child(3)>h6{
-    line-height: 110%;
+    .font_box>li:nth-child(2)>h6{
+        font-size: clamp(14px, 2vw, 20px);
     }
 }
 
@@ -130,178 +80,169 @@
 @media (max-width:768px) {
     /*제목*/
     header{
-        font-size: 1.6vW;
+        font-size: clamp(12px, 1.6vw, 18px);
     }
 
     /*각인 안내사항*/
-    main{
-    height: 18rem;
-    }
     #Notice>ul{
-    width: 80%;
+        width: 85%;
+        border-radius: 24px;
     }
     #Notice>ul>h3{
-    font-size: 2.4vw;
-    padding: 1rem 0;
-    margin: 0;
+        font-size: clamp(14px, 2.4vw, 20px);
+        padding: 0.8rem 0;
+        margin: 0;
     }
     #Notice>ul>li{
-    width: 90%;
-    font-size: 1.9vw;
-    line-height: 170%;
+        width: 90%;
+        font-size: clamp(11px, 1.9vw, 15px);
+        line-height: 170%;
     }
 
     /*텍스트입력*/
-    #Input_Box{
-        height: 40%;
+    #Input_Box>.button{
+        width: 85%;
     }
     input::placeholder {
-        font-size: 1.6vW;
+        font-size: clamp(10px, 1.6vw, 14px);
     }
     .button>form>button{
-        font-size: 12px;
-    }
-    
-    /*서체 선택 버튼*/
-    #Button_Box{
-    height: 10rem;
-    display: flex;
-    align-items: center;
-    margin: 1rem 0;
-    }
-    #Button_Box>ul{
-    flex-wrap: wrap;
-    }
-    #Button_Box>ul>li{
-    width: 30%;
-    height: 5rem;
-    padding: 0;
-    font-size: 2vw;
-    border-radius: 20px;
+        font-size: clamp(11px, 1.4vw, 14px);
+        height: 50px;
+        min-width: 50px;
+        padding: 0 12px;
     }
 
-    /*텍스트 입력*/
-    #Input_Box>.button{
-    width: 80%;
-    gap: 2rem;
-    }
-    .button>#FontPreview{
-    width: 90%;
+    /*서체 선택 버튼*/
+    #Button_Box>ul>li{
+        flex: 1 1 130px;
+        max-width: 180px;
+        height: 4rem;
+        font-size: clamp(10px, 2vw, 14px);
+        border-radius: 12px;
     }
 
     /*폰트 리스트*/
     #Preview_Box{
-    margin-top: 2rem;
-    height: 110%;
+        width: 96%;
     }
     #Preview_Box>.all_font,
     #Preview_Box>.font4,
     #Preview_Box>.font3,
     #Preview_Box>.font2,
     #Preview_Box>.font1{
-    width: 100%;
-    gap: 10% 2%;
-    height: 100%;
-    }
-    #Preview_Box>.all_font>li,
-    #Preview_Box>.font4>li,
-    #Preview_Box>.font3>li,
-    #Preview_Box>.font2>li,
-    #Preview_Box>.font1>li{
-    width: 30%;
-    height: 100%;
-    line-height: 200%;
-    }
-    .font_box>li>h5{
-    font-size: 2vW;
-    padding: 0.1rem;
-    }
-    .font_box>li>h5:nth-child(2){
-    font-size: 1.6vW;
-    }
-    .font_box>li>p{
-    font-size: 1.6vW;
-    padding: 1px 0;
-    margin: 0 auto;
-    }
-    .font_box>li:nth-child(3)>h6{
-    width: 98%;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 12px;
     }
 }
 
 /*모바일*/
 @media (max-width:480px) {
     /*각인 안내사항*/
-    main{
-    height: 16rem;
-    }
     #Notice>ul{
-    width: 90%;
+        width: 94%;
+        border-radius: 20px;
     }
     #Notice>ul>li{
-    font-size: 2.2vw;
-    line-height: 210%;
+        font-size: clamp(10px, 2.6vw, 14px);
+        line-height: 190%;
     }
     #Notice>ul>h3{
-    height: 1rem;
-    font-size: 3vw;
+        font-size: clamp(13px, 3.2vw, 18px);
     }
 
     /*텍스트 입력*/
     #Input_Box{
-    height: 20%;
+        height: 4rem;
     }
-    .button>form>#FontPreview{
-        width: 74%;
+    #Input_Box>.button{
+        width: 92%;
     }
     .button>form>button{
-        width: 16%;
+        height: 44px;
+        min-width: 44px;
+        padding: 0 10px;
     }
 
     /*서체 선택 버튼*/
-    #Button_Box{
-    height: 8rem;
-    }
     #Button_Box>ul{
-    gap: 0.4rem;
+        width: 94%;
+        gap: 0.4rem;
     }
     #Button_Box>ul>li{
-    height: 3rem;
+        flex: 1 1 100px;
+        max-width: none;
+        height: 3.2rem;
+        font-size: clamp(9px, 2.6vw, 13px);
+        border-radius: 10px;
     }
 
     /*폰트 리스트*/
     #Preview_Box{
-    margin: 0 auto;
+        width: 98%;
     }
-    .font_box{height: 100%;}
-    .font_box>li{
-    height: 30%;
+    #Preview_Box>.all_font,
+    #Preview_Box>.font4,
+    #Preview_Box>.font3,
+    #Preview_Box>.font2,
+    #Preview_Box>.font1{
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 8px;
     }
     #Preview_Box>.all_font>li,
     #Preview_Box>.font4>li,
     #Preview_Box>.font3>li,
     #Preview_Box>.font2>li,
     #Preview_Box>.font1>li{
-    width: 30%;
-    height: 80%;
-    }
-    .font_box>li:nth-child(1)>h5:nth-child(1){
-    height: 40%;
-    font-size: 20px;
-    }
-    .font_box>li:nth-child(1)>h5:nth-child(2){
-    font-size: 10px;
-    height: 20%;
-    }
-    .font_box>li:nth-child(2){
-    height: 40%;
-    display: flex;
-    align-items: center;
+        min-height: 160px;
     }
     .font_box>li:nth-child(2)>h6{
-    font-size: medium;
+        font-size: clamp(13px, 3vw, 18px);
     }
     .font_box>li:nth-child(3){
-    font-size: 12px;
+        font-size: clamp(9px, 2.2vw, 12px);
+    }
+}
+
+/*소형 모바일 (360px 이하)*/
+@media (max-width:360px) {
+    #Notice>ul{
+        width: 96%;
+        padding: 1rem 0;
+        border-radius: 16px;
+    }
+    #Notice>ul>li{
+        font-size: 10px;
+        line-height: 180%;
+    }
+    #Input_Box>.button{
+        width: 96%;
+    }
+    #Button_Box>ul{
+        width: 96%;
+    }
+    #Button_Box>ul>li{
+        flex: 1 1 80px;
+        height: 2.8rem;
+        font-size: 9px;
+    }
+    #Preview_Box{
+        width: 100%;
+    }
+    #Preview_Box>.all_font,
+    #Preview_Box>.font4,
+    #Preview_Box>.font3,
+    #Preview_Box>.font2,
+    #Preview_Box>.font1{
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        padding: 6px;
+    }
+    #Preview_Box>.all_font>li,
+    #Preview_Box>.font4>li,
+    #Preview_Box>.font3>li,
+    #Preview_Box>.font2>li,
+    #Preview_Box>.font1>li{
+        min-height: 140px;
     }
 }
