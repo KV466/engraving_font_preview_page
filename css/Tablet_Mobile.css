@@ -62,7 +62,7 @@
     #Preview_Box>.font3,
     #Preview_Box>.font2,
     #Preview_Box>.font1{
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
 }
 
@@ -118,7 +118,7 @@
     #Preview_Box>.font3,
     #Preview_Box>.font2,
     #Preview_Box>.font1{
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         gap: 12px;
     }
 }

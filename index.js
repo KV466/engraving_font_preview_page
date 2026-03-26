@@ -101,10 +101,15 @@ $(function(){
             }
 
             var html = $h6.html();
-            if (!html || html.indexOf('<br>') === -1) return;
+            if (!html) return;
 
-            // <br>로 분리된 텍스트를 pangram-line span으로 래핑
-            var lines = html.split('<br>');
+            // <br>이 있으면 멀티라인, 없으면 단일라인 — 둘 다 처리
+            var lines;
+            if (html.indexOf('<br>') !== -1) {
+                lines = html.split('<br>');
+            } else {
+                lines = [html];
+            }
             var wrapped = lines.map(function(line) {
                 return '<span class="pangram-line">' + line + '</span>';
             }).join('');
@@ -355,8 +360,10 @@ $(function(){
     if (document.fonts && document.fonts.ready) {
         document.fonts.ready.then(function() {
             autoFitPangrams();
+            setTimeout(autoFitPangrams, 1000);
         });
     } else {
         setTimeout(autoFitPangrams, 500);
+        setTimeout(autoFitPangrams, 1500);
     }
 });
