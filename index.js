@@ -24,10 +24,19 @@ $(function(){
         var TextV = $('#FontPreview').val();
         $('.font_box').each(function() {
             var $this = $(this);
-            if (checkFontSupport($this, TextV) && TextV.length > 0) {
-                $this.find('h6').text(TextV);
+            var $warning = $this.children('li').eq(2);
+            if (TextV.length > 0) {
+                var supported = checkFontSupport($this, TextV);
+                if (supported) {
+                    $this.find('h6').text(TextV);
+                    $warning.removeClass('unsupported');
+                } else {
+                    $this.find('h6').text('');
+                    $warning.addClass('unsupported');
+                }
             } else {
                 $this.find('h6').text('');
+                $warning.removeClass('unsupported');
             }
         });
     }
@@ -132,6 +141,13 @@ $(function(){
         var size = $(this).val();
         $('#FontSizeValue').text(size + 'px');
         $('.font_box>li:nth-child(2)>h6').css('font-size', size + 'px');
+    });
+
+    // 폰트 크기 초기화
+    $('#FontSizeReset').on('click', function() {
+        $('#FontSize').val(20);
+        $('#FontSizeValue').text('20px');
+        $('.font_box>li:nth-child(2)>h6').css('font-size', '20px');
     });
 
     // === 4. 다크모드 토글 ===
