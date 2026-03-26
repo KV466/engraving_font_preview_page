@@ -21,130 +21,250 @@ header{
 /*--------------폰트 적용---------------*/
 /*--------한/영/한/일-------*/
 /*101번*/
+@font-face {
+    font-family: '101';
+    src: url(../font/ChosunGs.TTF) format('truetype');
+}
 .font_box101>li{
-    font-family: 'JoseonPalace';
+    font-family: '101';
 }
 /*102번*/
+@font-face {
+    font-family: '102';
+    src: url(../font/malgun.woff) format('woff');
+}
 .font_box102>li{
-    font-family:'Malgun Gothic';
+    font-family: '102';                          
 }
 
 /*--------한/영/일-------*/
 /*110번*/
+@font-face {
+    font-family: '110';
+    src: url(../font/Ansungtangmyun-Bold.ttf) format('truetype');
+}
 .font_box110>li{
-    font-family: 'Ansungtangmyeon';
+    font-family: '110';
 }
 /*111번*/
+@font-face {
+    font-family: '111';
+    src: url(../font/ChusaLove.ttf) format('truetype');
+}
 .font_box111>li{
-    font-family: 'ChusaSarang';
+    font-family: '111';
 }
 /*112번*/
+@font-face {
+    font-family: '112';
+    src: url(../font/EF_Firenze.ttf) format('truetype');
+}
 .font_box112>li{
-    font-family: 'Florence';
+    font-family: '112';
 }
 
 /*--------한/영-------*/
 /*120번*/
+@font-face {
+    font-family: '120';
+    src: url(../font/HakgyoansimMabeopsaR.ttf) format('truetype');
+}
 .font_box120>li{
-    font-family: 'SchoolSafetyWizard';
+    font-family: '120';
 }
 /*121번*/
+@font-face {
+    font-family: '121';
+    src: url(../font/gabia_napjakBlock.ttf) format('truetype');
+}
 .font_box121>li{
-    font-family: 'GaviaNapjakblock';
+    font-family: '121';
 }
 /*122번*/
+@font-face {
+    font-family: '122';
+    src: url(../font/Bazzi.ttf) format('truetype');
+}
 .font_box122>li{
-    font-family: 'NexonBazzi';
+    font-family: '122';
 }
 /*123번*/
+@font-face {
+    font-family: '123';
+    src: url(../font/EF_Diary.ttf) format('truetype');
+}
 .font_box123>li{
-    font-family: 'Diary';
+    font-family: '123';
 }
 /*124번*/
+@font-face {
+    font-family: '124';
+    src: url(../font/87MMILSANG-Oblique.ttf) format('truetype');
+}
 .font_box124>li{
-    font-family: 'PalchilmmDailyItalic';
+    font-family: '124';
 }
 /*125번*/
+@font-face {
+    font-family: '125';
+    src: url(../font/KCC-Ahnchangho.ttf) format('truetype');
+}
 .font_box125>li{
-    font-family: 'KccAnchangho';
+    font-family: '125';
 }
 /*126번*/
+@font-face {
+    font-family: '126';
+    src: url(../font/Cooljazz.ttf) format('truetype');
+}
 .font_box126>li{
-    font-family: 'Cooljazz', sans-serif;
+    font-family: '126';
+}
+@font-face {
+    font-family: '127';
+    src: url(../font/솔뫼김대건Light.ttf) format('truetype');
 }
 /*127번*/
 .font_box127>li{
-    font-family: 'SolmoeKimDaegeon';
+    font-family: '127';
 }
 /*128번*/
+@font-face {
+    font-family: '128';
+    src: url(../font/GabiaCheongyeon.ttf) format('truetype');
+}
 .font_box128>li{
-    font-family: 'GabiaCheongyeon';
+    font-family: '128';
 }
 /*129번*/
+@font-face {
+    font-family: '129';
+    src: url(../font/전남교육유나체Regular.ttf) format('truetype');
+}
 .font_box129>li{
-    font-family: 'JeonnamEducationYuna';
+    font-family: '129';
 }
 /*130번*/
+@font-face {
+    font-family: '130';
+    src: url(../font/나눔손글씨고딕아니고고딩.ttf) format('truetype');
+}
 .font_box130>li{
-    font-family: 'NotGothicButGoding';
+    font-family: '130';
 }
-/*131번*/   
+/*131번*/  
+@font-face {
+    font-family: '131';
+    src: url(../font/온글잎위씨리스트.ttf) format('truetype');
+}
 .font_box131>li{
-    font-family: 'OngleipWFontList';
+    font-family: '131';
 }
-/*132번*/   
+/*132번*/
+@font-face {
+    font-family: '132';
+    src: url(../font/나눔손글씨나무정원.ttf) format('truetype');
+}
 .font_box132>li{
-    font-family: 'WoodGarden';
+    font-family: '132';
 }
 
 /*---------영----------*/
 /*151번*/
+@font-face {
+    font-family: '151';
+    src: url(../font/YEONGJUSeonbi.ttf) format('truetype');
+}
 .font_box151>li{
-    font-family: 'YeongjuSeonbi';
+    font-family: '151';
 }
 /*152번*/
+@font-face {
+    font-family: '152';
+    src: url(../font/BradleyHandITCTT.ttf) format('truetype');
+}
 .font_box152>li{
-    font-family: "Bradley Hand ITC", cursive;
+    font-family: '152';
 }
 /*153번*/
+@font-face {
+    font-family: '153';
+    src: url(../font/Monotype-Corsiva-Regular.ttf) format('truetype');
+}
 .font_box153>li{
-    font-family: "Monotype Corsiva", cursive;
+    font-family: '153';
 }
 /*154번*/
+@font-face {
+    font-family: '154';
+    src: url(../font/MISTRAL.TTF) format('truetype');
+}
 .font_box154>li{
-    font-family: "Mistral", cursive;
+    font-family: '154'
 }
 /*155번*/
+@font-face {
+    font-family: '155';
+    src: url(../font/continuous.ttf) format('truetype');
+}
 .font_box155>li{
-    font-family: "Continuous", cursive;
+    font-family: '155';
 }
 /*156번*/
+@font-face {
+    font-family: '156';
+    src: url(../font/Blacksword.otf) format('truetype');
+}
 .font_box156>li{
-    font-family: "Blacksword", cursive;
+    font-family: '156';
 }
 /*157번*/
+@font-face {
+    font-family: '157';
+    src: url(../font/DancingScript-Regular.ttf) format('truetype');
+}
 .font_box157>li{
-    font-family: "Dancing Script", cursive;
+    font-family: '157';
 }
 /*158번*/
+@font-face {
+    font-family: '158';
+    src: url(../font/Parisienne-Regular.ttf) format('truetype');
+}
 .font_box158>li{
-    font-family: "Parisienne", cursive;
+    font-family: '158';
 }
 /*159번*/
+@font-face {
+    font-family: '159';
+    src: url(../font/AlexBrush-Regular.ttf) format('truetype');
+}
 .font_box159>li{
-    font-family: "Alex Brush", cursive;
+    font-family: '159';
 }
 /*160번*/
+@font-face {
+    font-family: '160';
+    src: url(../font/GreatVibes-Regular.otf) format('opentype');
+}
 .font_box160>li{
-    font-family: "Great Vibes", cursive;
+    font-family: '160';
 }
 /*161번*/
+@font-face {
+    font-family: '161';
+    src: url(../font/Edwardian_Script.TTF) format('truetype');
+}
 .font_box161>li{
-    font-family: "Edwardian Script", cursive;
+    font-family: '161';
 }
 /*162번*/
+@font-face {
+    font-family: '162';
+    src: url(../font/inkburrow.ttf) format('truetype');
+}
 .font_box162>li{
-    font-family: "Inkburrow", cursive;
+    font-family: '162';
 }
 
 

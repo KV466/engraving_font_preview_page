@@ -53,7 +53,7 @@
     line-height: 120%;
     }
     .font_box>li>h5>button{
-    margin-left: 14px;
+    margin-left: 8px;
     }
 }
 
@@ -71,19 +71,15 @@
 
     /*텍스트 입력*/
     #Input_Box{
-        height: 20%;
+    height: 20%;
     }    
     #Input_Box>.button{
     width: 70%;
     }
-    .button>#FontPreview {
+    input::placeholder{
     font-size: 1.4vW;
     }
-    .button>.preview_button {
-    width: 14%;
-    font-size: 1.6vw;
-    }
-
+    
     /*서체 선택 버튼*/
     #Button_Box{
     height: 8rem;
@@ -113,7 +109,7 @@
     #Preview_Box>.font2>li,
     #Preview_Box>.font1>li{
     width: 30%;
-    height: 84%;
+    height: 100%;
     overflow-wrap: break-word;
     }
     .font_box>li>h5{
@@ -159,8 +155,11 @@
     #Input_Box{
         height: 40%;
     }
-    .button>#FontPreview{
-        font-size: 1.6vw;
+    input::placeholder {
+        font-size: 1.6vW;
+    }
+    .button>form>button{
+        font-size: 12px;
     }
     
     /*서체 선택 버튼*/
@@ -193,7 +192,6 @@
     /*폰트 리스트*/
     #Preview_Box{
     margin-top: 2rem;
-    font-size: 1.4vW;
     height: 110%;
     }
     #Preview_Box>.all_font,
@@ -202,7 +200,7 @@
     #Preview_Box>.font2,
     #Preview_Box>.font1{
     width: 100%;
-    gap: 20% 2%;
+    gap: 10% 2%;
     height: 100%;
     }
     #Preview_Box>.all_font>li,
@@ -253,20 +251,11 @@
     #Input_Box{
     height: 20%;
     }
-    .button{
-    height: 80%;
+    .button>form>#FontPreview{
+        width: 74%;
     }
-    #Input_Box>.button{
-    width: 80%;
-    gap: 1rem;
-    }
-    .button>#FontPreview{
-    width: 90%;
-    height: 90%;
-    padding: 0;
-    }
-    .button>.preview_button{
-    width: 18%;
+    .button>form>button{
+        width: 16%;
     }
 
     /*서체 선택 버튼*/
@@ -284,83 +273,35 @@
     #Preview_Box{
     margin: 0 auto;
     }
-    .font_box{height: 110%;}
+    .font_box{height: 100%;}
     .font_box>li{
     height: 30%;
-    }
-    #Preview_Box>.all_font,
-    #Preview_Box>.font4,
-    #Preview_Box>.font3,
-    #Preview_Box>.font2,
-    #Preview_Box>.font1 {
-    margin: 0 auto;
-    gap: 22% 6%;
     }
     #Preview_Box>.all_font>li,
     #Preview_Box>.font4>li,
     #Preview_Box>.font3>li,
     #Preview_Box>.font2>li,
     #Preview_Box>.font1>li{
-    width: 46%;
-    margin: 0;
-    height: 100%;
-    }
-    .font_box>li:nth-child(1){
-    height: 20%;
-    margin: 0;
-    display: flex;
-    flex-flow: column;
-    gap: 2px;
-    align-items: center;
-    }
-    .font_box>li:nth-child(1)>h5{
-    padding: 4px 0;
+    width: 30%;
+    height: 80%;
     }
     .font_box>li:nth-child(1)>h5:nth-child(1){
-    font-size: 18px;
+    height: 40%;
+    font-size: 20px;
     }
     .font_box>li:nth-child(1)>h5:nth-child(2){
-    font-size: 12px;
-    }
-    
-    .font_box>li:nth-child(2){
-    height: 60%;
-    }
-    .font_box>li>h5:nth-child(2){
     font-size: 10px;
+    height: 20%;
     }
-    .font_box>li:nth-child(2)>p{
-    margin: 0 auto;
-    padding: 4px 4px;
-    font-size: 12px;
-    line-height: 120%;
-    }
-    
-    .font_box>li:nth-child(3){
-    height: 12%;
+    .font_box>li:nth-child(2){
+    height: 40%;
     display: flex;
-    justify-content: center;
-    flex-flow: column;
-    margin: 0;
+    align-items: center;
     }
-    .font_box>li:nth-child(3)>h6{
-    font-size: 16px;
-    line-height: 140%;
+    .font_box>li:nth-child(2)>h6{
+    font-size: medium;
     }
- 
-    .font_box>li>p{
-    font-size: 2vW;
-    padding: 4px;
-    margin: 0;
+    .font_box>li:nth-child(3){
+    font-size: 12px;
     }
-
-    .font_box>.intext{
-    padding: 0.6rem 0.2rem;
-    }
-    .font_box>.intext>h6{
-    font-size: 8px;
-    line-height: 100%;
-    width: 100%;
-    }
-
 }

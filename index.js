@@ -211,6 +211,6 @@ $(function(){
 
         navigator.clipboard.writeText(H6num+') '+UserText)
         .then(function(){
-            alert('"'+H6num+') '+UserText+'"'+' 복사되었습니다. 배송메세지에 첨부해주세요.');});
+            alert('"'+H6num+') '+UserText+'"'+' 복사되었습니다. 배송메세지에 첨부해 주세요.');});
         });
 });
